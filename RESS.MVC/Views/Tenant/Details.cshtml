@@ -1,0 +1,114 @@
+﻿@model RESS.Models.Tenant.TenantDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TenantDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenantId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenantId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenantFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenantFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenantLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenantLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeaseStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeaseStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeaseEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeaseEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeaseDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeaseDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityDeposit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecurityDeposit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropertyId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
