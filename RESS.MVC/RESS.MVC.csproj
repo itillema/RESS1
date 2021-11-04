@@ -210,7 +210,9 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\FourSquareController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InvestmentController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ManagementController.cs" />
     <Compile Include="Controllers\NOIController.cs" />
     <Compile Include="Controllers\OwnerController.cs" />
     <Compile Include="Controllers\PropertyController.cs" />
@@ -328,11 +330,12 @@
     <Content Include="Views\CapitalizationRate\Details.cshtml" />
     <Content Include="Views\CapitalizationRate\Index.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
-    <Content Include="Views\Portal\InvestmentDash.cshtml" />
-    <Content Include="Views\Portal\ManagementDash.cshtml" />
+    <Content Include="Views\Investment\Index.cshtml" />
+    <Content Include="Views\Management\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\InvestmentDash\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
