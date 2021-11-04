@@ -18,8 +18,8 @@ namespace RESS.MVC.Controllers
             //var capRateService = new CapitalizationRateService(int.Parse(User.Identity.GetUserId()));
             //var fourSqareService = new FourSquareService(int.Parse(User.Identity.GetUserId()));
             //var netOperatingIncomeService = new NetOperatingIncomeService(int.Parse(User.Identity.GetUserId()));
-           // var model = new DashboardViewModel();
-           // model.MostRecentCapRateAnalyses = capRateService.MostRecentCapitalizationRateAnalysis();
+            //var model = new DashboardViewModel();
+            //model.MostRecentCapRateAnalyses = capRateService.MostRecentCapitalizationRateAnalysis();
             //model.MostRecentFourSqrAnalyses = fourSqareService.MostRecentFourSquareAnalysis();
             //model.MostRecentNOIAnalyses = netOperatingIncomeService.MostNetOperatingIncomeAnalysis();
 
