@@ -4,51 +4,54 @@
     ViewBag.Title = "Log in";
 }
 
-<h1 align="center">RESS</h1>
+<h1 class="bigtitle" align="center">RESS</h1>
+<h2 class="smalltitle" align="center">Real-Estate Strategy Software</h2>
 
 <div align="center">
     <div  align="center">
         <section class="jumbotron">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", align ="center" }))
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", align = "center" }))
             {
-                @Html.AntiForgeryToken()
-                
-                
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group" align="center">
-                    
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            @Html.AntiForgeryToken()
+
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group" align="center">
+
+                <div class="col-md-10">
+                    <!--div class="col-md-10"-->
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "USERNAME" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <div class="form-group" align="center">
+
+                <div class="col-md-10">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "PASSWORD" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group" align="center">
+                <div class="col-md-offset-2 col-md-10">
+                    <div class="checkbox">
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        @Html.LabelFor(m => m.RememberMe)
                     </div>
                 </div>
-                <div class="form-group" align="center">
-                   
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
+            </div>
+            <div class="form-group" align="center">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Log In" class="btn btn-default" />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
-                    </div>
-                </div>
-                <p>
-                    @Html.ActionLink("New to RESS? Create an Account.", "Register")
-                </p>
-                @* Enable this once you have account confirmation enabled for password reset functionality
-                    <p>
-                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                    </p>*@
+            </div>
+            <p>
+                @Html.ActionLink("New to RESS? Create an Account.", "Register")
+            </p>
+            @* Enable this once you have account confirmation enabled for password reset functionality
+        <p>
+            @Html.ActionLink("Forgot your password?", "ForgotPassword")
+        </p>*@
             }
         </section>
     </div>
@@ -58,6 +61,7 @@
         </section>
     </div>-->
 </div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

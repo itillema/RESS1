@@ -328,10 +328,10 @@
     <Content Include="Views\CapitalizationRate\Delete.cshtml" />
     <Content Include="Views\CapitalizationRate\Details.cshtml" />
     <Content Include="Views\CapitalizationRate\Index.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Dashboard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

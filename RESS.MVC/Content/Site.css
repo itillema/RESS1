@@ -90,6 +90,9 @@ textarea {
     padding-right: 0px;
     text-transform: uppercase;
 }
+#topRow {
+    margin-bottom: 15px;
+}
 
 /* cyrillic-ext */
 @font-face {

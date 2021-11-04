@@ -9,18 +9,19 @@ using System.Web.Mvc;
 
 namespace RESS.MVC.Controllers
 {
+    [Authorize]
     public class DashboardController : Controller
     {
         // GET: Dashboard
         public ActionResult Index()
         {
-            var capRateService = new CapitalizationRateService(int.Parse(User.Identity.GetUserId()));
-            var fourSqareService = new FourSquareService(int.Parse(User.Identity.GetUserId()));
-            var netOperatingIncomeService = new NetOperatingIncomeService(int.Parse(User.Identity.GetUserId()));
-            var model = new DashboardViewModel();
-            model.MostRecentCapRateAnalyses = capRateService.MostRecentCapitalizationRateAnalysis();
-            model.MostRecentFourSqrAnalyses = fourSqareService.MostRecentFourSquareAnalysis();
-            model.MostRecentNOIAnalyses = netOperatingIncomeService.MostNetOperatingIncomeAnalysis();
+            //var capRateService = new CapitalizationRateService(int.Parse(User.Identity.GetUserId()));
+            //var fourSqareService = new FourSquareService(int.Parse(User.Identity.GetUserId()));
+            //var netOperatingIncomeService = new NetOperatingIncomeService(int.Parse(User.Identity.GetUserId()));
+           // var model = new DashboardViewModel();
+           // model.MostRecentCapRateAnalyses = capRateService.MostRecentCapitalizationRateAnalysis();
+            //model.MostRecentFourSqrAnalyses = fourSqareService.MostRecentFourSquareAnalysis();
+            //model.MostRecentNOIAnalyses = netOperatingIncomeService.MostNetOperatingIncomeAnalysis();
 
             return View();
         }
