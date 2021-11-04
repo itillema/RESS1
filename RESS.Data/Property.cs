@@ -150,6 +150,9 @@ namespace RESS.Data
 
         [ForeignKey(nameof(Owners))] // Need OWNER FIRST AND LAST NAME!!!
         public int OwnerId { get; set; }
+        public string OwnerFirstName { get; set; }
+        public string OwnerLastName { get; set; }
+        
         public virtual Data.Owner Owners { get; set; }
 
         // Tenant Information
@@ -157,7 +160,7 @@ namespace RESS.Data
         //public int TenantId { get; set; }
         //public virtual Tenant Tenant { get; set; }
 
-        public virtual ICollection<Tenant> Tenants { get; set; } // virtual icollection
+        public virtual ICollection<Tenant> Tenants { get; set; } 
 
     }
 }

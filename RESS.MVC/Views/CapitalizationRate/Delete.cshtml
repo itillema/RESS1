@@ -4,245 +4,246 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2 class="smalltitle">Delete Report: Capitalization Rate Analysis</h2>
+<div class="jumbotron">
+    
+    <div>
+        <h3>Verify Report information before deleting:</h3>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CapitalizationRateAnalysisId)
+            </dt>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>CapitalizationRateDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CapitalizationRateAnalysisId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CapitalizationRateAnalysisId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CapitalizationRateAnalysisId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CapRateRunDate)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CapRateRunDate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CapRateRunDate)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CapRateRunDate)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PropertyId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PropertyId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PropertyId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PropertyId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MarketRentValue)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MarketRentValue)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MarketRentValue)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MarketRentValue)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MarketValue)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MarketValue)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MarketValue)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MarketValue)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.OwnerId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnerId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.OwnerId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.OwnerId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PurchasePrice)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PurchasePrice)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PurchasePrice)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PurchasePrice)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.OwnedDuration)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnedDuration)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.OwnedDuration)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.OwnedDuration)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyLaundryIncome)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyLaundryIncome)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyLaundryIncome)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyLaundryIncome)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyMiscIncome)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyMiscIncome)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyMiscIncome)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyMiscIncome)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TotalMonthlyIncome)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TotalMonthlyIncome)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TotalMonthlyIncome)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TotalMonthlyIncome)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyMortgageExpense)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyMortgageExpense)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyMortgageExpense)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyMortgageExpense)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyRentalInsuranceExpense)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyRentalInsuranceExpense)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyRentalInsuranceExpense)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyRentalInsuranceExpense)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyUtilityExpense)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyUtilityExpense)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyUtilityExpense)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyUtilityExpense)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyHoaExpense)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyHoaExpense)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyHoaExpense)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyHoaExpense)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyPropertyServiceExpense)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyPropertyServiceExpense)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyPropertyServiceExpense)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyPropertyServiceExpense)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyVacancyExpense)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyVacancyExpense)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyVacancyExpense)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyVacancyExpense)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyRepairExpense)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyRepairExpense)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyRepairExpense)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyRepairExpense)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyManagementExpense)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyManagementExpense)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyManagementExpense)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyManagementExpense)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TotalMonthlyPropertyExpenses)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TotalMonthlyPropertyExpenses)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TotalMonthlyPropertyExpenses)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TotalMonthlyPropertyExpenses)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.AnnualNetOperatingIncome)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AnnualNetOperatingIncome)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.AnnualNetOperatingIncome)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.AnnualNetOperatingIncome)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.AnnualRentIncreasePercent)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AnnualRentIncreasePercent)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.AnnualRentIncreasePercent)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.AnnualRentIncreasePercent)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CurrentCapitalizationRate)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CurrentCapitalizationRate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CurrentCapitalizationRate)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CurrentCapitalizationRate)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.EstFiveYearCapitalizationRate)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EstFiveYearCapitalizationRate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.EstFiveYearCapitalizationRate)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.EstFiveYearCapitalizationRate)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.EstFifteenYearCapitalizationRate)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EstFifteenYearCapitalizationRate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.EstFifteenYearCapitalizationRate)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.EstFifteenYearCapitalizationRate)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.EstThirtyYearCapitalizationRate)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EstThirtyYearCapitalizationRate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.EstThirtyYearCapitalizationRate)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.EstThirtyYearCapitalizationRate)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.OwnedDurationCapitalizationRate)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnedDurationCapitalizationRate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.OwnedDurationCapitalizationRate)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.OwnedDurationCapitalizationRate)
-        </dd>
+        </dl>
+        <h3>Proceed? Reports cannot be recovered, if deleted.</h3>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("View all Cap Rate Reports", "Index")
+            </div>
+        }
+    </div>
 </div>

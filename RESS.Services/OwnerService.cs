@@ -77,7 +77,7 @@ namespace RESS.Services
                         PurchasePrice = entity.PurchasePrice,
                         DownPayment = entity.DownPayment,
                         MortgageAmount = entity.MortgageAmount,
-                        OwnedProperties = entity.OwnedProperties
+                        OwnedProperties = (List<Property>)entity.OwnedProperties
 
                     };
             }

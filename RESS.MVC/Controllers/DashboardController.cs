@@ -15,13 +15,13 @@ namespace RESS.MVC.Controllers
         // GET: Dashboard
         public ActionResult Index()
         {
-            //var capRateService = new CapitalizationRateService(int.Parse(User.Identity.GetUserId()));
-            //var fourSqareService = new FourSquareService(int.Parse(User.Identity.GetUserId()));
-            //var netOperatingIncomeService = new NetOperatingIncomeService(int.Parse(User.Identity.GetUserId()));
-            //var model = new DashboardViewModel();
-            //model.MostRecentCapRateAnalyses = capRateService.MostRecentCapitalizationRateAnalysis();
-            //model.MostRecentFourSqrAnalyses = fourSqareService.MostRecentFourSquareAnalysis();
-            //model.MostRecentNOIAnalyses = netOperatingIncomeService.MostNetOperatingIncomeAnalysis();
+            var capRateService = new CapitalizationRateService());
+            var fourSqareService = new FourSquareService());
+            var netOperatingIncomeService = new NetOperatingIncomeService());
+            var model = new DashboardViewModel();
+            model.MostRecentCapRateAnalyses = capRateService.MostRecentCapitalizationRateAnalysis();
+            model.MostRecentFourSqrAnalyses = fourSqareService.MostRecentFourSquareAnalysis();
+            model.MostRecentNOIAnalyses = netOperatingIncomeService.MostNetOperatingIncomeAnalysis();
 
             return View();
         }

@@ -21,11 +21,8 @@ namespace RESS.Data
         public decimal PurchasePrice { get; set; }
         public decimal DownPayment { get; set; }
         public decimal MortgageAmount { get; set; }
-        public List<Property> OwnedProperties { get; set; }
 
-        [ForeignKey(nameof(Property))]
-        public int PropertyId { get; set; }
-        public string Address { get; set; }
-        public virtual Property Property { get; set; }
+        
+        public virtual ICollection<Property> OwnedProperties { get; set; }
     }
 }

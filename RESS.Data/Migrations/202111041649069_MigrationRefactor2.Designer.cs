@@ -7,13 +7,13 @@ namespace RESS.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class SolutionRefactor1 : IMigrationMetadata
+    public sealed partial class MigrationRefactor2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SolutionRefactor1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(MigrationRefactor2));
         
         string IMigrationMetadata.Id
         {
-            get { return "202111031751436_SolutionRefactor1"; }
+            get { return "202111041649069_MigrationRefactor2"; }
         }
         
         string IMigrationMetadata.Source

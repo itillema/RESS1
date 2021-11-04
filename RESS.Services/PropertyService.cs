@@ -117,7 +117,7 @@ namespace RESS.Services
                         DownPayment = entity.DownPayment,
                         MortgageAmount = entity.MortgageAmount,
                         Owners = entity.Owners,
-                        Tenants = entity.Tenants
+                        Tenants = (List<Tenant>)entity.Tenants
 
                     };
             }

@@ -4,48 +4,49 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="smalltitle">All Four-Square Analysis Reports</h2>
+<div class="jumbotron">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FourSquareAnalysisId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FourSquareDateRan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PropertyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th></th>
+        </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FourSquareAnalysisId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FourSquareDateRan)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PropertyId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th></th>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FourSquareAnalysisId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FourSquareDateRan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PropertyId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.ActionLink("View Report", "Details", new { id=item.FourSquareAnalysisId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.FourSquareAnalysisId })
+                </td>
+            </tr>
+        }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FourSquareAnalysisId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FourSquareDateRan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PropertyId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
-
-</table>
+    </table>
+</div>
