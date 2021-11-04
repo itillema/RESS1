@@ -148,7 +148,7 @@ namespace RESS.Data
         public decimal? DownPayment { get; set; }
         public decimal? MortgageAmount { get; set; }
 
-        [ForeignKey(nameof(Owners))]
+        [ForeignKey(nameof(Owners))] // Need OWNER FIRST AND LAST NAME!!!
         public int OwnerId { get; set; }
         public virtual Data.Owner Owners { get; set; }
 

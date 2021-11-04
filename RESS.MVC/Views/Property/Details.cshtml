@@ -4,207 +4,270 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Property Profile</h2>
-<hr/>
-<div>
-    <h4>Property Information for @Html.DisplayFor(model => model.Address)</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.PropertyId)
-        </dt>
+<h2 class="smalltitle">Property Profile</h2>
+<div class="jumbotron">
+    <div>
+        <h4>Property Information for @Html.DisplayFor(model => model.Address)</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.PropertyId)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PropertyId)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.PropertyId)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.City)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.City)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.City)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.State)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.State)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.State)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.State)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Zip)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Zip)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Zip)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Zip)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Beds)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Beds)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Beds)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Beds)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Baths)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Baths)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Baths)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Baths)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SquareFeet)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.SquareFeet)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SquareFeet)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.SquareFeet)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.HomeType)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.HomeType)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.HomeType)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.HomeType)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.YearBuilt)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.YearBuilt)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.YearBuilt)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.YearBuilt)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Heating)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Heating)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Heating)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Heating)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cooling)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Cooling)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cooling)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Cooling)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AvailableParking)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.AvailableParking)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.AvailableParking)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.AvailableParking)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ParkingType)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ParkingType)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ParkingType)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ParkingType)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LotSize)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.LotSize)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LotSize)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.LotSize)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Basement)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Basement)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Basement)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Basement)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Flooring)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Flooring)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Flooring)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Flooring)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Roofing)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Roofing)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Roofing)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Roofing)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ConstructionMaterials)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ConstructionMaterials)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ConstructionMaterials)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ConstructionMaterials)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Neighborhood)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Neighborhood)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Neighborhood)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Neighborhood)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Parcel)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Parcel)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Parcel)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Parcel)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MarketValue)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.MarketValue)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MarketValue)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.MarketValue)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MarketRentValue)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.MarketRentValue)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MarketRentValue)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.MarketRentValue)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ThirdyDayChange)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ThirdyDayChange)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ThirdyDayChange)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ThirdyDayChange)
+            </dd>
 
-    </dl>
+            <!--OWNER-->
+            <dt class="headingstyle3">Property Owner</dt>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OwnerId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OwnerId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PurchaseDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PurchaseDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PurchasePrice)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PurchasePrice)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OwnedDuration)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OwnedDuration)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DownPayment)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DownPayment)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MortgageAmount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MortgageAmount)
+            </dd>
+
+            <!--OWNER-->
+            <dt class="headingstyle3">Property Owner</dt>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Tenants)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Tenants)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Update Property", "Edit", new { id = Model.PropertyId }) |
+        @Html.ActionLink("View All Properties", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Update Property", "Edit", new { id = Model.PropertyId }) |
-    @Html.ActionLink("Back to Property Index", "Index")
-</p>
