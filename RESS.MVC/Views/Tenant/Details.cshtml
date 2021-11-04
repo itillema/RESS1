@@ -4,111 +4,111 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2 class="smalltitle">Tenant Profile</h2>
+<div class="jumbotron">
+    <div>
+        
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TenantId)
+            </dt>
 
-<div>
-    <h4>TenantDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TenantId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TenantId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TenantId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TenantFirstName)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TenantFirstName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TenantFirstName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TenantFirstName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TenantLastName)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TenantLastName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TenantLastName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TenantLastName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MobileNo)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MobileNo)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MobileNo)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MobileNo)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.LeaseStart)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LeaseStart)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.LeaseStart)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.LeaseStart)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.LeaseEnd)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LeaseEnd)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.LeaseEnd)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.LeaseEnd)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.LeaseDuration)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LeaseDuration)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.LeaseDuration)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.LeaseDuration)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.SecurityDeposit)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SecurityDeposit)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.SecurityDeposit)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.SecurityDeposit)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.RentAmount)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RentAmount)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.RentAmount)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.RentAmount)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PropertyId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PropertyId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PropertyId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PropertyId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Update Tenant", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("View All Tenants", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
