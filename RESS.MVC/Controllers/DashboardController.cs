@@ -15,9 +15,9 @@ namespace RESS.MVC.Controllers
         // GET: Dashboard
         public ActionResult Index()
         {
-            var capRateService = new CapitalizationRateService());
-            var fourSqareService = new FourSquareService());
-            var netOperatingIncomeService = new NetOperatingIncomeService());
+            var capRateService = new CapitalizationRateService();
+            var fourSqareService = new FourSquareService();
+            var netOperatingIncomeService = new NetOperatingIncomeService();
             var model = new DashboardViewModel();
             model.MostRecentCapRateAnalyses = capRateService.MostRecentCapitalizationRateAnalysis();
             model.MostRecentFourSqrAnalyses = fourSqareService.MostRecentFourSquareAnalysis();
