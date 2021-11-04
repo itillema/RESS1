@@ -30,12 +30,7 @@ namespace RESS.Models.Owner
         [Display(Name = "Initial Mortgage Amount")]
         public decimal MortgageAmount { get; set; }
         [Display(Name = "Properties for this Owner")]
-        public List<Property> OwnedProperties { get; set; }
+        public virtual ICollection<Property> OwnedProperties { get; set; }
 
-        [ForeignKey(nameof(Property))]
-        [Display(Name = "Property ID")]
-        public int PropertyId { get; set; }
-        public string Address { get; set; }
-        public virtual Property Property { get; set; }
     }
 }

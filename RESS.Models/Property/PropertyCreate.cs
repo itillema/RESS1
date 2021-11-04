@@ -65,12 +65,6 @@ namespace RESS.Models
         public int OwnerId { get; set; }
         public virtual Data.Owner Owners { get; set; }
 
-        // Tenant Information
-        [ForeignKey(nameof(Tenant))]
-        [Display(Name = "Tenant ID")]
-        public int TenantId { get; set; }
-        public virtual RESS.Data.Tenant Tenant { get; set; }
-
-        public List<RESS.Data.Tenant> Tenants { get; set; }
+        public virtual ICollection<Data.Tenant> Tenants { get; set; }
     }
 }
