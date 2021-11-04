@@ -11,12 +11,6 @@ namespace RESS.Services
     public class TenantService
     {
 
-        private readonly int _userId;
-        public TenantService(int userId)
-        {
-            _userId = userId;
-        }
-
         public bool CreateTenant(TenantCreate model)
         {
             var entity =

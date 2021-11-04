@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace RESS.MVC.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class TenantController : Controller
     {
         
@@ -19,8 +19,8 @@ namespace RESS.MVC.Controllers
             // GET: Tenant/Index
             public ActionResult Index()
             {
-                var userId = int.Parse(User.Identity.GetUserId());
-                var service = new TenantService(userId);
+                
+                var service = new TenantService();
                 var model = service.GetTenant();
 
                 return View(model);
@@ -40,7 +40,7 @@ namespace RESS.MVC.Controllers
             {
                 if (ModelState.IsValid) return View(model);
 
-                var service = CreateTenantService();
+                var service = new TenantService();
 
                 if (service.CreateTenant(model))
                 {
@@ -59,7 +59,7 @@ namespace RESS.MVC.Controllers
         [ActionName("Delete")]
             public ActionResult Delete(int id)
             {
-                var svc = CreateTenantService();
+                var svc = new TenantService();
                 var model = svc.GetTenantById(id);
 
                 return View(model);
@@ -71,7 +71,7 @@ namespace RESS.MVC.Controllers
             [ValidateAntiForgeryToken]
             public ActionResult DeleteTenantPost(int id)
             {
-                var service = CreateTenantService();
+                var service = new TenantService();
                 service.DeleteTenant(id);
                 TempData["SaveResult"] = "Tenant has been successfully deleted";
                 return RedirectToAction("Index");
@@ -81,7 +81,7 @@ namespace RESS.MVC.Controllers
             [ActionName("Edit")]
             public ActionResult Update(int id)
             {
-                var service = CreateTenantService();
+                var service = new TenantService();
                 var detail = service.GetTenantById(id);
             var model =
                 new TenantEdit
@@ -111,7 +111,7 @@ namespace RESS.MVC.Controllers
                     ModelState.AddModelError("", "ID Mismatch");
                     return View(model);
                 }
-                var service = CreateTenantService();
+                var service = new TenantService();
                 if (service.UpdateTenant(model))
                 {
                     TempData["SaveResult"] = "Tenant profile was successfully udpated.";
@@ -126,18 +126,13 @@ namespace RESS.MVC.Controllers
             // GET: Tenant/Details/{id}
             public ActionResult Details(int id)
             {
-                var svc = CreateTenantService();
+                var svc = new TenantService();
                 var model = svc.GetTenantById(id);
 
                 return View(model);
             }
 
-            private TenantService CreateTenantService()
-            {
-                var userId = int.Parse(User.Identity.GetUserId());
-                var service = new TenantService(userId);
-                return service;
-            }
+            
 
 
     }

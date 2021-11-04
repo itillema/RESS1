@@ -10,11 +10,6 @@ namespace RESS.Services
 {
     public class NetOperatingIncomeService
     {
-        private readonly int _userId;
-        public NetOperatingIncomeService(int userId)
-        {
-            _userId = userId;
-        }
 
         public IEnumerable<NetOperatingIncome> MostNetOperatingIncomeAnalysis()
         {

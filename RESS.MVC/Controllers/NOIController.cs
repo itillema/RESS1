@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace RESS.MVC.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class NOIController : Controller
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -18,8 +18,8 @@ namespace RESS.MVC.Controllers
         // GET: NetOperatingIncome/Index
         public ActionResult Index()
         {
-            var userId = int.Parse(User.Identity.GetUserId());
-            var service = new NetOperatingIncomeService(userId);
+            
+            var service = new NetOperatingIncomeService();
             var model = service.GetNetOperatingIncome();
 
             return View(model);
@@ -39,7 +39,7 @@ namespace RESS.MVC.Controllers
         {
             if (ModelState.IsValid) return View(model);
 
-            var service = CreateNetOperatingIncomeService();
+            var service = new NetOperatingIncomeService();
 
             if (service.CreateNetOperatingIncome(model))
             {
@@ -58,7 +58,7 @@ namespace RESS.MVC.Controllers
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var svc = CreateNetOperatingIncomeService();
+            var svc = new NetOperatingIncomeService();
             var model = svc.GetNetOperatingIncomeById(id);
 
             return View(model);
@@ -70,7 +70,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteNetOperatingIncomePost(int id)
         {
-            var service = CreateNetOperatingIncomeService();
+            var service = new NetOperatingIncomeService();
             service.DeleteNetOperatingIncome(id);
             TempData["SaveResult"] = "NetOperatingIncome has been successfully deleted";
             return RedirectToAction("Index");
@@ -80,7 +80,7 @@ namespace RESS.MVC.Controllers
         [ActionName("Edit")]
         public ActionResult Update(int id)
         {
-            var service = CreateNetOperatingIncomeService();
+            var service = new NetOperatingIncomeService();
             var detail = service.GetNetOperatingIncomeById(id);
             var model =
                 new NetOperatingIncomeEdit
@@ -110,7 +110,7 @@ namespace RESS.MVC.Controllers
                 ModelState.AddModelError("", "ID Mismatch");
                 return View(model);
             }
-            var service = CreateNetOperatingIncomeService();
+            var service = new NetOperatingIncomeService();
             if (service.UpdateNetOperatingIncome(model))
             {
                 TempData["SaveResult"] = "NetOperatingIncome profile was successfully udpated.";
@@ -125,17 +125,12 @@ namespace RESS.MVC.Controllers
         // GET: NetOperatingIncome/Details/{id}
         public ActionResult Details(int id)
         {
-            var svc = CreateNetOperatingIncomeService();
+            var svc = new NetOperatingIncomeService();
             var model = svc.GetNetOperatingIncomeById(id);
 
             return View(model);
         }
 
-        private NetOperatingIncomeService CreateNetOperatingIncomeService()
-        {
-            var userId = int.Parse(User.Identity.GetUserId());
-            var service = new NetOperatingIncomeService(userId);
-            return service;
-        }
+        
     }
 }

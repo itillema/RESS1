@@ -153,11 +153,11 @@ namespace RESS.Data
         public virtual Data.Owner Owners { get; set; }
 
         // Tenant Information
-        [ForeignKey(nameof(Tenant))]
-        public int TenantId { get; set; }
-        public virtual Tenant Tenant { get; set; }
+        //[ForeignKey(nameof(Tenant))]
+        //public int TenantId { get; set; }
+        //public virtual Tenant Tenant { get; set; }
 
-        public List<Tenant> Tenants { get; set; }
+        public virtual ICollection<Tenant> Tenants { get; set; } // virtual icollection
 
     }
 }

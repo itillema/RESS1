@@ -10,11 +10,7 @@ namespace RESS.Services
 {
     public class FourSquareService
     {
-        private readonly int _userId;
-        public FourSquareService(int userId)
-        {
-            _userId = userId;
-        }
+       
 
         public IEnumerable<FourSquareAnalysis> MostRecentFourSquareAnalysis()
         {

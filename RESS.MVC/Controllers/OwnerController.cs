@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace RESS.MVC.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class OwnerController : Controller
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -18,8 +18,8 @@ namespace RESS.MVC.Controllers
         // GET: Owner/Index
         public ActionResult Index()
         {
-            var userId = int.Parse(User.Identity.GetUserId());
-            var service = new OwnerService(userId);
+            
+            var service = new OwnerService();
             var model = service.GetOwner();
 
             return View(model);
@@ -39,7 +39,7 @@ namespace RESS.MVC.Controllers
         {
             if (ModelState.IsValid) return View(model);
 
-            var service = CreateOwnerService();
+            var service = new OwnerService();
 
             if (service.CreateOwner(model))
             {
@@ -58,7 +58,7 @@ namespace RESS.MVC.Controllers
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var svc = CreateOwnerService();
+            var svc = new OwnerService();
             var model = svc.GetOwnerById(id);
 
             return View(model);
@@ -70,7 +70,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteOwnerPost(int id)
         {
-            var service = CreateOwnerService();
+            var service = new OwnerService();
             service.DeleteOwner(id);
             TempData["SaveResult"] = "Owner has been successfully deleted";
             return RedirectToAction("Index");
@@ -80,7 +80,7 @@ namespace RESS.MVC.Controllers
         [ActionName("Edit")]
         public ActionResult Update(int id)
         {
-            var service = CreateOwnerService();
+            var service = new OwnerService();
             var detail = service.GetOwnerById(id);
             var model =
                 new OwnerEdit
@@ -111,7 +111,7 @@ namespace RESS.MVC.Controllers
                 ModelState.AddModelError("", "Owner ID Mismatch");
                 return View(model);
             }
-            var service = CreateOwnerService();
+            var service = new OwnerService();
             if (service.UpdateOwner(model))
             {
                 TempData["SaveResult"] = "Owner profile was successfully udpated.";
@@ -126,17 +126,12 @@ namespace RESS.MVC.Controllers
         // GET: Owner/Details/{id}
         public ActionResult Details(int id)
         {
-            var svc = CreateOwnerService();
+            var svc = new OwnerService();
             var model = svc.GetOwnerById(id);
 
             return View(model);
         }
 
-        private OwnerService CreateOwnerService()
-        {
-            var userId = int.Parse(User.Identity.GetUserId());
-            var service = new OwnerService(userId);
-            return service;
-        }
+        
     }
 }

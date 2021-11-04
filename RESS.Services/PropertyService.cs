@@ -10,11 +10,6 @@ namespace RESS.Services
 {
     public class PropertyService
     {
-        private readonly int _userId;
-        public PropertyService(int userId)
-        {
-            _userId = userId;
-        }
 
         public bool CreateProperty(PropertyCreate model)
         {

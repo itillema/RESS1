@@ -10,11 +10,6 @@ namespace RESS.Services
 {
     public class OwnerService
     {
-        private readonly int _userId;
-        public OwnerService(int userId)
-        {
-            _userId = userId;
-        }
 
         public bool CreateOwner(OwnerCreate model)
         {

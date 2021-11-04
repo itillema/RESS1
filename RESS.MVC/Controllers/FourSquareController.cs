@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace RESS.MVC.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class FourSquareController : Controller
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -18,8 +18,8 @@ namespace RESS.MVC.Controllers
         // GET: FourSquare/Index
         public ActionResult Index()
         {
-            var userId = int.Parse(User.Identity.GetUserId());
-            var service = new FourSquareService(userId);
+            
+            var service = new FourSquareService();
             var model = service.GetFourSquare();
 
             return View(model);
@@ -39,7 +39,7 @@ namespace RESS.MVC.Controllers
         {
             if (ModelState.IsValid) return View(model);
 
-            var service = CreateFourSquareService();
+            var service = new FourSquareService();
 
             if (service.CreateFourSquare(model))
             {
@@ -58,7 +58,7 @@ namespace RESS.MVC.Controllers
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var svc = CreateFourSquareService();
+            var svc = new FourSquareService();
             var model = svc.GetFourSquareById(id);
 
             return View(model);
@@ -70,7 +70,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteFourSquarePost(int id)
         {
-            var service = CreateFourSquareService();
+            var service = new FourSquareService();
             service.DeleteFourSquare(id);
             TempData["SaveResult"] = "Four Square Analysis has been successfully deleted";
             return RedirectToAction("Index");
@@ -80,7 +80,7 @@ namespace RESS.MVC.Controllers
         [ActionName("Edit")]
         public ActionResult Update(int id)
         {
-            var service = CreateFourSquareService();
+            var service = new FourSquareService();
             var detail = service.GetFourSquareById(id);
             var model =
                 new FourSquareEdit
@@ -116,7 +116,7 @@ namespace RESS.MVC.Controllers
                 ModelState.AddModelError("", "Analysis ID Mismatch");
                 return View(model);
             }
-            var service = CreateFourSquareService();
+            var service = new FourSquareService();
             if (service.UpdateFourSquare(model))
             {
                 TempData["SaveResult"] = "Four Square Analysis was successfully udpated and re-run.";
@@ -131,17 +131,12 @@ namespace RESS.MVC.Controllers
         // GET: FourSquare/Details/{id}
         public ActionResult Details(int id)
         {
-            var svc = CreateFourSquareService();
+            var svc = new FourSquareService();
             var model = svc.GetFourSquareById(id);
 
             return View(model);
         }
 
-        private FourSquareService CreateFourSquareService()
-        {
-            var userId = int.Parse(User.Identity.GetUserId());
-            var service = new FourSquareService(userId);
-            return service;
-        }
+        
     }
 }

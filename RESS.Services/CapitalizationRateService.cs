@@ -20,11 +20,7 @@ namespace RESS.Services
             }
         }
 
-        private readonly int _userId;
-        public CapitalizationRateService(int userId)
-        {
-            _userId = userId;
-        }
+       
 
         public bool CreateCapitalizationRate(CapitalizationRateCreate model)
         {
