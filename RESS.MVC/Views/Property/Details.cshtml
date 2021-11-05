@@ -4,11 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<h2 class="smalltitle">Property Profile</h2>
+<h2 class="smalltitle">Property Profile for @Html.DisplayFor(model => model.Address)</h2>
 <div class="jumbotron">
     <div>
-        <h4>Property Information for @Html.DisplayFor(model => model.Address)</h4>
-        <hr />
+        
         <dl class="dl-horizontal">
             <dt>
                 @Html.DisplayNameFor(model => model.PropertyId)

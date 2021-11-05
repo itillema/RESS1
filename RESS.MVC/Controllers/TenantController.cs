@@ -38,7 +38,7 @@ namespace RESS.MVC.Controllers
             [ValidateAntiForgeryToken]
             public ActionResult Create(TenantCreate model)
             {
-                if (ModelState.IsValid) return View(model);
+                if (!ModelState.IsValid) return View(model);
 
                 var service = new TenantService();
 

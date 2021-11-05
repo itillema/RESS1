@@ -24,6 +24,7 @@ namespace RESS.Services
                     LeaseEnd = model.LeaseEnd,
                     SecurityDeposit = model.SecurityDeposit,
                     RentAmount = model.RentAmount,
+                    PropertyId = model.PropertyId
                     
                 };
             using (var ctx = new ApplicationDbContext())
@@ -101,6 +102,7 @@ namespace RESS.Services
                 entity.LeaseEnd = model.LeaseEnd;
                 entity.SecurityDeposit = model.SecurityDeposit;
                 entity.RentAmount = model.RentAmount;
+                entity.PropertyId = model.PropertyId;
 
                 return ctx.SaveChanges() == 1;
 

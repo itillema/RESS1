@@ -15,7 +15,7 @@ namespace RESS.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query = ctx.NetOperatingIncomeAnalyses.OrderByDescending(a => a.NOIRundate);
+                var query = ctx.NetOperatingIncomeAnalyses.Include("Property").OrderByDescending(a => a.NOIRundate);
                 return query.ToArray();
             }
         }

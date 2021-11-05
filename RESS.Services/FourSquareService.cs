@@ -16,7 +16,7 @@ namespace RESS.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query = ctx.FourSquareAnalyses.OrderByDescending(a => a.FourSquareDateRan);
+                var query = ctx.FourSquareAnalyses.Include("Property").OrderByDescending(a => a.FourSquareDateRan);
                 return query.ToArray();
             }
         }

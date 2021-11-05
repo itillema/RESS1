@@ -15,7 +15,7 @@ namespace RESS.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query = ctx.CapitalizationRateAnalyses.OrderByDescending(a => a.CapRateRunDate);
+                var query = ctx.CapitalizationRateAnalyses.Include("Property").Include("Owner").OrderByDescending(a => a.CapRateRunDate);
                 return query.ToArray();
             }
         }
