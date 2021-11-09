@@ -40,7 +40,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(PropertyCreate model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             var service = new PropertyService();
 
@@ -122,7 +122,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Update(int id,PropertyEdit model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             if (model.PropertyId != id)
             {

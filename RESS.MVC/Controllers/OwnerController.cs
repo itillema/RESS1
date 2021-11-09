@@ -37,7 +37,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(OwnerCreate model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             var service = new OwnerService();
 
@@ -104,7 +104,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Update(int id, OwnerEdit model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             if (model.OwnerId != id)
             {

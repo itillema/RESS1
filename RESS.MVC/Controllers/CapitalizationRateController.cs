@@ -37,7 +37,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CapitalizationRateCreate model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             var service = new CapitalizationRateService();
 

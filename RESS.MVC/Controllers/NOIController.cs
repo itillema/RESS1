@@ -37,7 +37,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(NetOperatingIncomeCreate model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             var service = new NetOperatingIncomeService();
 
@@ -103,7 +103,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Update(int id, NetOperatingIncomeEdit model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             if (model.NetOperatingIncomeId != id)
             {

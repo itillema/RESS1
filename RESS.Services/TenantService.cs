@@ -34,6 +34,7 @@ namespace RESS.Services
             }
         }
 
+
         public IEnumerable<TenantListItem> GetTenant()
         {
             using (var ctx = new ApplicationDbContext())
@@ -122,6 +123,9 @@ namespace RESS.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+
+
     }
 }
 

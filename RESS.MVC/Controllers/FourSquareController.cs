@@ -37,7 +37,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(FourSquareCreate model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             var service = new FourSquareService();
 
@@ -109,7 +109,7 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Update(int id, FourSquareEdit model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             if (model.FourSquareAnalysisId != id)
             {

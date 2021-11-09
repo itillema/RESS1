@@ -10,6 +10,7 @@ namespace RESS.Services
 {
     public class PropertyService
     {
+        private Tenant _collectionOfTenants = new Tenant();
 
         public bool CreateProperty(PropertyCreate model)
         {
@@ -53,6 +54,8 @@ namespace RESS.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        
 
         public IEnumerable<PropertyListItem> GetProperties()
         {
