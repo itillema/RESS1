@@ -60,11 +60,12 @@ namespace RESS.Models
         [Display(Name = "Mortgage Amount")]
         public decimal? MortgageAmount { get; set; }
 
-        [ForeignKey(nameof(Owners))]
-        [Display(Name = "Owner ID")]
-        public int OwnerId { get; set; }
-        public virtual Data.Owner Owners { get; set; }
+        //[ForeignKey(nameof(Owners))]
+        //[Display(Name = "Owner ID")]
+        //public int OwnerId { get; set; }
+        //public virtual Data.Owner Owners { get; set; }
 
-        //public virtual ICollection<Data.Tenant> Tenants { get; set; }
+
+
     }
 }

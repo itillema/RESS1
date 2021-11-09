@@ -31,11 +31,12 @@ namespace RESS.Models.Tenant
         [Display(Name = "Monthly Rent Amount")]
         public decimal RentAmount { get; set; }
 
-        [ForeignKey(nameof(Property))]
-        [Display(Name = "Property ID")]
-        public int PropertyId { get; set; }
-        public string Address { get; set; }
-        public virtual Property Property { get; set; }
+        //[ForeignKey(nameof(Property))]
+        //[Display(Name = "Property ID")]
+        //public int PropertyId { get; set; }
+        //public string Address { get; set; }
+        //public virtual Property Property { get; set; }
+        public virtual ICollection<Property> Properties { get; set; }
 
 
     }

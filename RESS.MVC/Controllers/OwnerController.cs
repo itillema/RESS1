@@ -89,11 +89,7 @@ namespace RESS.MVC.Controllers
                     OwnerLastName = detail.OwnerLastName,
                     MobileNo = detail.MobileNo,
                     Email = detail.Email,
-                    PurchaseDate = detail.PurchaseDate,
-                    PurchasePrice = detail.PurchasePrice,
-                    DownPayment = detail.DownPayment,
-                    MortgageAmount = detail.MortgageAmount,
-                    OwnedProperties = detail.OwnedProperties
+                    
                 };
             return View(model);
         }

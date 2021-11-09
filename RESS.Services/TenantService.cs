@@ -10,6 +10,12 @@ namespace RESS.Services
 {
     public class TenantService
     {
+        //public ICollection<Tenant> TenantList()
+        //{
+        //    List<Tenant> listOfTenants = new List<Tenant>();
+        //    ctx.Tenants.Add(listOfTenants);
+        //    return ctx.SaveChanges() == 1;
+        //}
 
         public bool CreateTenant(TenantCreate model)
         {
@@ -24,14 +30,18 @@ namespace RESS.Services
                     LeaseEnd = model.LeaseEnd,
                     SecurityDeposit = model.SecurityDeposit,
                     RentAmount = model.RentAmount,
-                    PropertyId = model.PropertyId
+                    
                     
                 };
             using (var ctx = new ApplicationDbContext())
             {
+                //List<Tenant> listOfTenants = new List<Tenant>();
+                //ctx.Tenants.(listOfTenants);
+                
                 ctx.Tenants.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
+
         }
 
 
@@ -79,8 +89,7 @@ namespace RESS.Services
                         LeaseDuration = entity.LeaseDuration,
                         SecurityDeposit = entity.SecurityDeposit,
                         RentAmount = entity.RentAmount,
-                        PropertyId = entity.PropertyId,
-                        Address = entity.Address
+                        Properties = entity.Properties
 
                     };
             }
@@ -103,7 +112,7 @@ namespace RESS.Services
                 entity.LeaseEnd = model.LeaseEnd;
                 entity.SecurityDeposit = model.SecurityDeposit;
                 entity.RentAmount = model.RentAmount;
-                entity.PropertyId = model.PropertyId;
+                entity.Properties = model.Properties;
 
                 return ctx.SaveChanges() == 1;
 

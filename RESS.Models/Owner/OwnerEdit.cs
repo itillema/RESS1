@@ -21,14 +21,14 @@ namespace RESS.Models.Owner
         [Display(Name = "Mobile Number")]
         public string MobileNo { get; set; }
         public string Email { get; set; }
-        [Display(Name = "Property Purchase Date")]
-        public DateTime PurchaseDate { get; set; }
-        [Display(Name = "Purchase Price")]
-        public decimal PurchasePrice { get; set; }
-        [Display(Name = "Down Payment")]
-        public decimal DownPayment { get; set; }
-        [Display(Name = "Initial Mortgage Amount")]
-        public decimal MortgageAmount { get; set; }
+        //[Display(Name = "Property Purchase Date")]
+        //public DateTime PurchaseDate { get; set; }
+        //[Display(Name = "Purchase Price")]
+        //public decimal PurchasePrice { get; set; }
+        //[Display(Name = "Down Payment")]
+        //public decimal DownPayment { get; set; }
+        //[Display(Name = "Initial Mortgage Amount")]
+        //public decimal MortgageAmount { get; set; }
         [Display(Name = "Properties for this Owner")]
         public virtual ICollection<Property> OwnedProperties { get; set; }
 

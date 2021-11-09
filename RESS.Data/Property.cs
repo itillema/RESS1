@@ -159,6 +159,10 @@ namespace RESS.Data
         //[ForeignKey(nameof(Tenant))]
         //public int TenantId { get; set; }
         //public virtual Tenant Tenant { get; set; }
+        public Property()
+        {
+            this.Tenants = new HashSet<Tenant>();
+        }
 
         public virtual ICollection<Tenant> Tenants { get; set; } 
 

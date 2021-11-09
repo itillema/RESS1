@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RESS.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace RESS.Models.Tenant
         public decimal SecurityDeposit { get; set; }
         [Display(Name = "Monthly Rent Amount")]
         public decimal RentAmount { get; set; }
-        public int PropertyId { get; set; }
+
+        public virtual ICollection<Property> Properties { get; set; }
     }
 }

@@ -20,11 +20,7 @@ namespace RESS.Services
                     OwnerLastName = model.OwnerLastName,
                     MobileNo = model.MobileNo,
                     Email = model.Email,
-                    PurchaseDate = model.PurchaseDate,
-                    PurchasePrice  = model.PurchasePrice,
-                    DownPayment = model.DownPayment,
-                    MortgageAmount = model.MortgageAmount,
-                    OwnedProperties = model.OwnedProperties
+                    
 
                 };
             using (var ctx = new ApplicationDbContext())
@@ -72,11 +68,7 @@ namespace RESS.Services
                         OwnerLastName = entity.OwnerLastName,
                         MobileNo = entity.MobileNo,
                         Email = entity.Email,
-                        PurchaseDate = entity.PurchaseDate,
-                        OwnedDuration = entity.OwnedDuration,
-                        PurchasePrice = entity.PurchasePrice,
-                        DownPayment = entity.DownPayment,
-                        MortgageAmount = entity.MortgageAmount,
+                        
                         OwnedProperties = entity.OwnedProperties
 
                     };
@@ -96,11 +88,7 @@ namespace RESS.Services
                 entity.OwnerLastName = model.OwnerLastName;
                 entity.MobileNo = model.MobileNo;
                 entity.Email = model.Email;
-                entity.PurchaseDate = model.PurchaseDate;
-                entity.PurchasePrice = model.PurchasePrice;
-                entity.DownPayment = model.DownPayment;
-                entity.MortgageAmount = model.MortgageAmount;
-                entity.OwnedProperties = model.OwnedProperties;
+                
 
                 return ctx.SaveChanges() == 1;
 

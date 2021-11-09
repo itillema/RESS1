@@ -10,10 +10,11 @@ namespace RESS.Services
 {
     public class PropertyService
     {
-        private Tenant _collectionOfTenants = new Tenant();
+        
 
         public bool CreateProperty(PropertyCreate model)
         {
+            
             var entity =
                 new Property()
                 {
@@ -44,10 +45,10 @@ namespace RESS.Services
                     PurchasePrice = model.PurchasePrice,
                     DownPayment = model.DownPayment,
                     MortgageAmount = model.MortgageAmount,
-                    Owners = model.Owners,
-                    Tenants = model.Tenants
+                    
 
                 };
+            
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Properties.Add(entity);
@@ -184,5 +185,11 @@ namespace RESS.Services
             }
         }
         
+        //public Tenant TenantCollection()
+        //{
+        //    List<Tenant> listOfTenants = new List<Tenant>();
+        //    listOfTenants.Add();
+
+        //}
     }
 }

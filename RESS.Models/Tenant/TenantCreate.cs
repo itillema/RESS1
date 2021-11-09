@@ -25,6 +25,6 @@ namespace RESS.Models.Tenant
         public decimal SecurityDeposit { get; set; }
         [Display(Name = "Monthly Rent Amount")]
         public decimal RentAmount { get; set; }
-        public int PropertyId { get; set; }
+        
     }
 }

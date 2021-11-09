@@ -64,8 +64,11 @@ namespace RESS.Models
         [ForeignKey(nameof(Owners))]
         [Display(Name = "Owner ID")]
         public int OwnerId { get; set; }
+        public string OwnerFirstName { get; set; }
+        public string OwnerLastName { get; set; }
         public virtual Data.Owner Owners { get; set; }
 
+        //Tenant List
         public virtual ICollection<Data.Tenant> Tenants { get; set; }
     }
 }
