@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RESS.Services
 {
-    public class CapitalizationRateService
+    public class CapitalizationRateService : ICapitalizationRateService
     {
 
         public IEnumerable<CapitalizationRateAnalysis> MostRecentCapitalizationRateAnalysis()
@@ -20,7 +20,7 @@ namespace RESS.Services
             }
         }
 
-       
+
 
         public bool CreateCapitalizationRate(CapitalizationRateCreate model)
         {

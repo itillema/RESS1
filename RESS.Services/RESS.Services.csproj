@@ -109,7 +109,12 @@
   <ItemGroup>
     <Compile Include="CapitalizationRateService.cs" />
     <Compile Include="FourSquareService.cs" />
+    <Compile Include="ICapitalizationRateService.cs" />
+    <Compile Include="IFourSquareService.cs" />
+    <Compile Include="INetOperatingIncomeService.cs" />
+    <Compile Include="IOwnerService.cs" />
     <Compile Include="IPropertyService.cs" />
+    <Compile Include="ITenantService.cs" />
     <Compile Include="NetOperatingIncomeService.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="OwnerService.cs" />

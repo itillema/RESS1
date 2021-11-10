@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RESS.Services
 {
-    public class OwnerService
+    public class OwnerService : IOwnerService
     {
 
         public bool CreateOwner(OwnerCreate model)
@@ -20,7 +20,7 @@ namespace RESS.Services
                     OwnerLastName = model.OwnerLastName,
                     MobileNo = model.MobileNo,
                     Email = model.Email,
-                    
+
 
                 };
             using (var ctx = new ApplicationDbContext())
@@ -68,7 +68,7 @@ namespace RESS.Services
                         OwnerLastName = entity.OwnerLastName,
                         MobileNo = entity.MobileNo,
                         Email = entity.Email,
-                        
+
                         OwnedProperties = entity.OwnedProperties
 
                     };
@@ -88,7 +88,7 @@ namespace RESS.Services
                 entity.OwnerLastName = model.OwnerLastName;
                 entity.MobileNo = model.MobileNo;
                 entity.Email = model.Email;
-                
+
 
                 return ctx.SaveChanges() == 1;
 

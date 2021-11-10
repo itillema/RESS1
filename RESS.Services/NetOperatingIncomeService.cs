@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RESS.Services
 {
-    public class NetOperatingIncomeService
+    public class NetOperatingIncomeService : INetOperatingIncomeService
     {
 
         public IEnumerable<NetOperatingIncome> MostNetOperatingIncomeAnalysis()

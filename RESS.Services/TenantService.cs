@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RESS.Services
 {
-    public class TenantService
+    public class TenantService : ITenantService
     {
         //public ICollection<Tenant> TenantList()
         //{
@@ -30,14 +30,14 @@ namespace RESS.Services
                     LeaseEnd = model.LeaseEnd,
                     SecurityDeposit = model.SecurityDeposit,
                     RentAmount = model.RentAmount,
-                    
-                    
+
+
                 };
             using (var ctx = new ApplicationDbContext())
             {
                 //List<Tenant> listOfTenants = new List<Tenant>();
                 //ctx.Tenants.(listOfTenants);
-                
+
                 ctx.Tenants.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
@@ -61,7 +61,7 @@ namespace RESS.Services
                                     TenantLastName = e.TenantLastName,
                                     MobileNo = e.MobileNo,
                                     Email = e.Email
-                                    
+
 
                                 });
                 return query.ToArray();

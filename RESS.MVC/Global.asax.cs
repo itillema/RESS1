@@ -1,5 +1,6 @@
 using Autofac;
 using Autofac.Integration.Mvc;
+using RESS.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +36,13 @@ namespace RESS.MVC
 
             //// OPTIONAL: Enable action method parameter injection (RARE).
             //builder.InjectActionInvoker();
+
+            builder.RegisterType<PropertyService>().As<IPropertyService>();
+            builder.RegisterType<TenantService>().As<ITenantService>();
+            builder.RegisterType<OwnerService>().As<IOwnerService>();
+            builder.RegisterType<NetOperatingIncomeService>().As<INetOperatingIncomeService>();
+            builder.RegisterType<FourSquareService>().As<IFourSquareService>();
+            builder.RegisterType<CapitalizationRateService>().As<ICapitalizationRateService>();
 
             // Set the dependency resolver to be Autofac.
             var container = builder.Build();

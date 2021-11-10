@@ -15,12 +15,19 @@ namespace RESS.MVC.Controllers
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
 
+        private readonly ICapitalizationRateService _service;
+
+        public CapitalizationRateController(ICapitalizationRateService service)
+        {
+            _service = service;
+        }
+
         // GET: CapitalizationRate/Index
         public ActionResult Index()
         {
             
-            var service = new CapitalizationRateService();
-            var model = service.GetCapitalizationRate();
+            
+            var model = _service.GetCapitalizationRate();
 
             return View(model);
         }
@@ -39,9 +46,9 @@ namespace RESS.MVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            var service = new CapitalizationRateService();
+            
 
-            if (service.CreateCapitalizationRate(model))
+            if (_service.CreateCapitalizationRate(model))
             {
                 TempData["SaveResult"] = "CapitalizationRate has been successfully created.";
                 return RedirectToAction("Index");
@@ -58,8 +65,8 @@ namespace RESS.MVC.Controllers
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var svc = new CapitalizationRateService();
-            var model = svc.GetCapitalizationRateById(id);
+            
+            var model = _service.GetCapitalizationRateById(id);
 
             return View(model);
         }
@@ -70,8 +77,8 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteCapitalizationRatePost(int id)
         {
-            var service = new CapitalizationRateService();
-            service.DeleteCapitalizationRate(id);
+            
+            _service.DeleteCapitalizationRate(id);
             TempData["SaveResult"] = "CapitalizationRate has been successfully deleted";
             return RedirectToAction("Index");
         }
@@ -125,8 +132,8 @@ namespace RESS.MVC.Controllers
         // GET: CapitalizationRate/Details/{id}
         public ActionResult Details(int id)
         {
-            var svc = new CapitalizationRateService();
-            var model = svc.GetCapitalizationRateById(id);
+            
+            var model = _service.GetCapitalizationRateById(id);
 
             return View(model);
         }

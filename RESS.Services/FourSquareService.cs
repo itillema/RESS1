@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace RESS.Services
 {
-    public class FourSquareService
+    public class FourSquareService : IFourSquareService
     {
-       
+
 
         public IEnumerable<FourSquareAnalysis> MostRecentFourSquareAnalysis()
         {
@@ -80,8 +80,8 @@ namespace RESS.Services
                                     FourSquareDateRan = e.FourSquareDateRan,
                                     Address = e.Address,
                                     FourSquareAnalysisId = e.FourSquareAnalysisId,
-                                    
-                                   
+
+
                                 });
                 return query.ToArray();
             }
@@ -129,7 +129,7 @@ namespace RESS.Services
                         TotalCtcRoi = entity.TotalCtcRoi,
                         InvestmentRisk = entity.InvestmentRisk
                     };
-                
+
             }
         }
 
@@ -142,7 +142,7 @@ namespace RESS.Services
                         .FourSquareAnalyses
                         .Single(e => e.FourSquareAnalysisId == model.FourSquareAnalysisId);
 
-                
+
                 entity.MonthlyLaundryIncome = model.MonthlyLaundryIncome;
                 entity.MonthlyMiscIncome = model.MonthlyMiscIncome;
                 entity.MonthlyMortgageExpense = model.MonthlyMortgageExpense;
@@ -157,7 +157,7 @@ namespace RESS.Services
                 entity.EstDownPayment = model.EstDownPayment;
                 entity.EstClosingCost = model.EstClosingCost;
                 entity.EstRehabBudget = model.EstRehabBudget;
-                
+
                 return ctx.SaveChanges() == 1;
 
             }

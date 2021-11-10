@@ -18,12 +18,19 @@ namespace RESS.MVC.Controllers
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
 
+        private readonly IPropertyService _service;
+
+        public PropertyController(IPropertyService service)
+        {
+            _service = service;
+        }
+
         // GET: Property/Index
         public ActionResult Index()
         {
-            
-            var service = new PropertyService();
-            var model = service.GetProperties();
+
+
+            var model = _service.GetProperties();
 
             return View(model);
         }
@@ -42,9 +49,9 @@ namespace RESS.MVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            var service = new PropertyService();
+            
 
-            if (service.CreateProperty(model))
+            if (_service.CreateProperty(model))
             {
                 TempData["SaveResult"] = "The property has been successfully created.";
                 return RedirectToAction("Index");
@@ -61,8 +68,8 @@ namespace RESS.MVC.Controllers
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var svc = new PropertyService();
-            var model = svc.GetPropertyById(id);
+            
+            var model = _service.GetPropertyById(id);
 
             return View(model);
         }
@@ -73,8 +80,8 @@ namespace RESS.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeletePropertyPost(int id)
         {
-            var service = new PropertyService();
-            service.DeleteProperty(id);
+            
+            _service.DeleteProperty(id);
             TempData["SaveResult"] = "Property has been successfully deleted";
             return RedirectToAction("Index");
         }
@@ -83,8 +90,8 @@ namespace RESS.MVC.Controllers
         [ActionName("Edit")]
         public ActionResult Update(int id)
         {
-            var service = new PropertyService();
-            var detail = service.GetPropertyById(id);
+            
+            var detail = _service.GetPropertyById(id);
             var model =
                 new PropertyEdit
                 {
@@ -129,8 +136,8 @@ namespace RESS.MVC.Controllers
                 ModelState.AddModelError("", "ID Mismatch");
                 return View(model);
             }
-            var service = new PropertyService();
-            if (service.UpdateProperty(model))
+            
+            if (_service.UpdateProperty(model))
             {
                 TempData["SaveResult"] = "Property profile was successfully udpated.";
                 return RedirectToAction("Index");
@@ -144,8 +151,8 @@ namespace RESS.MVC.Controllers
         // GET: Property/Details/{id}
         public ActionResult Details(int id)
         {
-            var svc = new PropertyService();
-            var model = svc.GetPropertyById(id);
+            
+            var model = _service.GetPropertyById(id);
 
             return View(model);
         }
