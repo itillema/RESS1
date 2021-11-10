@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace RESS.Services
 {
-    public class PropertyService
+    public class PropertyService : IPropertyService
     {
-        
+
 
         public bool CreateProperty(PropertyCreate model)
         {
-            
+
             var entity =
                 new Property()
                 {
@@ -45,10 +45,10 @@ namespace RESS.Services
                     PurchasePrice = model.PurchasePrice,
                     DownPayment = model.DownPayment,
                     MortgageAmount = model.MortgageAmount,
-                    
+
 
                 };
-            
+
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Properties.Add(entity);
@@ -56,7 +56,7 @@ namespace RESS.Services
             }
         }
 
-        
+
 
         public IEnumerable<PropertyListItem> GetProperties()
         {
@@ -66,7 +66,7 @@ namespace RESS.Services
                     ctx
                         .Properties
                         .Select(
-                            e => 
+                            e =>
                                 new PropertyListItem
                                 {
                                     PropertyId = e.PropertyId,
@@ -184,7 +184,7 @@ namespace RESS.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        
+
         //public Tenant TenantCollection()
         //{
         //    List<Tenant> listOfTenants = new List<Tenant>();

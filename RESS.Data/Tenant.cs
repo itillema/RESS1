@@ -28,9 +28,9 @@ namespace RESS.Data
             this.Properties = new HashSet<Property>();
         }
 
-        [ForeignKey(nameof(Property))]
-        public int PropertyId { get; set; }
-        public string Address { get; set; }
+        //[ForeignKey(nameof(Property))]
+        //public int PropertyId { get; set; }
+        //public string Address { get; set; }
         public virtual ICollection<Property> Properties { get; set; }
     }
 }
