@@ -29,7 +29,6 @@ namespace RESS.MVC.Controllers
         public ActionResult Index()
         {
 
-
             var model = _service.GetProperties();
 
             return View(model);

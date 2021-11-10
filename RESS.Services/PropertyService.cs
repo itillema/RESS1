@@ -116,7 +116,7 @@ namespace RESS.Services
                         MarketRentValue = entity.MarketRentValue,
                         ThirdyDayChange = (float)entity.ThirdyDayChange,
                         PurchaseDate = entity.PurchaseDate,
-                        OwnedDuration = entity.OwnedDuration,
+                        OwnedDuration = DateTime.Now - entity.PurchaseDate,
                         PurchasePrice = entity.PurchasePrice,
                         DownPayment = entity.DownPayment,
                         MortgageAmount = entity.MortgageAmount,
