@@ -89,6 +89,8 @@ namespace RESS.MVC.Controllers
         [ActionName("Edit")]
         public ActionResult Update(int id)
         {
+            var tenantService = new TenantService();
+            ViewBag.tenants = tenantService.GetTenant();
             
             var detail = _service.GetPropertyById(id);
             var model =
@@ -117,7 +119,13 @@ namespace RESS.MVC.Controllers
                     Parcel = detail.Parcel,
                     MarketValue = detail.MarketValue,
                     MarketRentValue = detail.MarketRentValue,
-                    ThirdyDayChange = detail.ThirdyDayChange
+                    ThirdyDayChange = detail.ThirdyDayChange,
+                    PurchaseDate = detail.PurchaseDate,
+                    DownPayment = detail.DownPayment,
+                    MortgageAmount = detail.MortgageAmount,
+                    OwnerId = detail.OwnerId,
+                    Tenants = detail.Tenants
+
                 };
             return View(model);
         }

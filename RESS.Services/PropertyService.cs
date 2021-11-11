@@ -163,8 +163,8 @@ namespace RESS.Services
                 entity.PurchasePrice = model.PurchasePrice;
                 entity.DownPayment = model.DownPayment;
                 entity.MortgageAmount = model.MortgageAmount;
-                entity.Owners = model.Owners;
-                entity.Tenants = model.Tenants;
+                entity.OwnerId = model.OwnerId;
+                
 
                 return ctx.SaveChanges() == 1;
 

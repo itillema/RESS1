@@ -176,35 +176,7 @@
                 @Html.ValidationMessageFor(model => model.ThirdyDayChange, "", new { @class = "text-danger" })
             </div>
         </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Owners.OwnerId, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Owners.OwnerId, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Owners.OwnerId, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Tenants, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                
-                <table class="list-group-item-danger">
-                    <tr>
-                        <th>Tenant Name</th>
-                        <th>Tenant ID</th>
-                    </tr>
-                    < @foreach (var item in Model.Tenants)
-                    {
-                <tr>
-                    <td>{"@item.TenantFirstName " + "@item.TenantLastName"}</td>
-                    <td>@item.TenantId</td>
-                </tr>
-                    }
-                    
-                </table>
-                @Html.ValidationMessageFor(model => model.Tenants, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

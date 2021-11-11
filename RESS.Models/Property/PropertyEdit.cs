@@ -64,6 +64,6 @@ namespace RESS.Models
         public int OwnerId { get; set; }
         public virtual Data.Owner Owners { get; set; }
 
-        public virtual ICollection<Data.Tenant> Tenants { get; set; }
+        public virtual ICollection<Data.Tenant> Tenants { get; set; } //new icollection
     }
 }
