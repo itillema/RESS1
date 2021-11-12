@@ -10,7 +10,7 @@ namespace RESS.Services
 {
     public class PropertyService : IPropertyService
     {
-
+        List<Tenant> listOfTenants = new List<Tenant>();
 
         public bool CreateProperty(PropertyCreate model)
         {
@@ -18,6 +18,7 @@ namespace RESS.Services
             var entity =
                 new Property()
                 {
+                    PropertyId = model.PropertyId,
                     Address = model.Address,
                     City = model.City,
                     State = (Data.State)model.State,
@@ -45,12 +46,14 @@ namespace RESS.Services
                     PurchasePrice = model.PurchasePrice,
                     DownPayment = model.DownPayment,
                     MortgageAmount = model.MortgageAmount,
+                    Tenants = listOfTenants
 
 
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
+                
                 ctx.Properties.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
@@ -127,8 +130,12 @@ namespace RESS.Services
             }
         }
 
+        
+
         public bool UpdateProperty(PropertyEdit model)
         {
+            //var tenantService = new TenantService();
+            //model.Tenants = (ICollection<Tenant>)tenantService.GetTenant();
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
@@ -164,11 +171,13 @@ namespace RESS.Services
                 entity.DownPayment = model.DownPayment;
                 entity.MortgageAmount = model.MortgageAmount;
                 entity.OwnerId = model.OwnerId;
+                entity.Tenants = listOfTenants;
                 
 
                 return ctx.SaveChanges() == 1;
 
             }
+            
         }
 
         public bool DeleteProperty(int propertyId)
@@ -185,11 +194,6 @@ namespace RESS.Services
             }
         }
 
-        //public Tenant TenantCollection()
-        //{
-        //    List<Tenant> listOfTenants = new List<Tenant>();
-        //    listOfTenants.Add();
-
-        //}
+        
     }
 }

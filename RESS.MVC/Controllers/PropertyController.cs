@@ -91,7 +91,7 @@ namespace RESS.MVC.Controllers
         {
             var tenantService = new TenantService();
             ViewBag.tenants = tenantService.GetTenant();
-            
+
             var detail = _service.GetPropertyById(id);
             var model =
                 new PropertyEdit
@@ -143,7 +143,7 @@ namespace RESS.MVC.Controllers
                 ModelState.AddModelError("", "ID Mismatch");
                 return View(model);
             }
-            
+
             if (_service.UpdateProperty(model))
             {
                 TempData["SaveResult"] = "Property profile was successfully udpated.";

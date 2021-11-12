@@ -13,6 +13,7 @@ namespace RESS.Models
     public class PropertyCreate
     {
         [Required]
+        public int PropertyId { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public State State { get; set; }

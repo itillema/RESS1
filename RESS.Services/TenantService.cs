@@ -17,6 +17,8 @@ namespace RESS.Services
         //    return ctx.SaveChanges() == 1;
         //}
 
+        List<Tenant> listOfTenants = new List<Tenant>();
+
         public bool CreateTenant(TenantCreate model)
         {
             var entity =
@@ -64,7 +66,7 @@ namespace RESS.Services
 
 
                                 });
-                return query.ToArray();
+                return query.ToArray().ToList();
             }
         }
 
