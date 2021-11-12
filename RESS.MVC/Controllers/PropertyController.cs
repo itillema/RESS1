@@ -89,14 +89,14 @@ namespace RESS.MVC.Controllers
         [ActionName("Edit")]
         public ActionResult Update(int id)
         {
-            var tenantService = new TenantService();
-            ViewBag.tenants = tenantService.GetTenant();
+            //var tenantService = new TenantService();
+            //ViewBag.tenants = tenantService.GetTenant();
 
             var detail = _service.GetPropertyById(id);
             var model =
                 new PropertyEdit
                 {
-                   
+
                     Address = detail.Address,
                     City = detail.City,
                     State = detail.State,
@@ -123,7 +123,7 @@ namespace RESS.MVC.Controllers
                     PurchaseDate = detail.PurchaseDate,
                     DownPayment = detail.DownPayment,
                     MortgageAmount = detail.MortgageAmount,
-                    OwnerId = detail.OwnerId,
+                    Owners = detail.Owners,
                     Tenants = detail.Tenants
 
                 };

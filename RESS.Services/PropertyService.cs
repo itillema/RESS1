@@ -170,7 +170,7 @@ namespace RESS.Services
                 entity.PurchasePrice = model.PurchasePrice;
                 entity.DownPayment = model.DownPayment;
                 entity.MortgageAmount = model.MortgageAmount;
-                entity.OwnerId = model.OwnerId;
+                entity.Owners = model.Owners;
                 entity.Tenants = listOfTenants;
                 
 
