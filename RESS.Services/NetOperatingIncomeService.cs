@@ -77,7 +77,7 @@ namespace RESS.Services
 
 
                                 });
-                return query.ToArray();
+                return query.ToArray().OrderByDescending(e => e.NOIRundate);
             }
         }
 

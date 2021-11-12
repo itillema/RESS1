@@ -84,7 +84,7 @@ namespace RESS.Services
                                     OwnerId = e.OwnerId
 
                                 });
-                return query.ToArray();
+                return query.ToArray().OrderByDescending(e => e.CapRateRunDate);
             }
         }
 

@@ -15,6 +15,7 @@ namespace RESS.Models.FourSquareAnalysis
         // Analysis Identifiers
         [Display(Name = "Four Square Analysis ID")]
         public int FourSquareAnalysisId { get; set; }
+        [Display(Name = "Ran on")]
         public DateTime FourSquareDateRan { get; set; }
 
         [ForeignKey(nameof(Property))]

@@ -23,6 +23,7 @@ namespace RESS.Services
 
         public bool CreateFourSquare(FourSquareCreate model)
         {
+            
             var entity =
                 new FourSquareAnalysis()
                 {
@@ -83,7 +84,7 @@ namespace RESS.Services
 
 
                                 });
-                return query.ToArray();
+                return query.ToArray().OrderByDescending(e => e.FourSquareDateRan );
             }
         }
 
