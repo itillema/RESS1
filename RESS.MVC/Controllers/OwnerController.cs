@@ -84,7 +84,7 @@ namespace RESS.MVC.Controllers
         }
 
         // GET:  Owner/Update/{id}
-        [ActionName("Edit")]
+        [ActionName("Update")]
         public ActionResult Update(int id)
         {
             
@@ -103,7 +103,7 @@ namespace RESS.MVC.Controllers
 
         // POST: Owner/Update/{id}
         [HttpPost]
-        [ActionName("Edit")]
+        [ActionName("Update")]
         [ValidateAntiForgeryToken]
         public ActionResult Update(int id, OwnerEdit model)
         {
