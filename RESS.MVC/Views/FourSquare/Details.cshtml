@@ -5,214 +5,283 @@
 }
 
 <h2 class="smalltitle">Report: Four-Square Analysis</h2>
-<div class="jumbotron">
-    <div>
-        
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.FourSquareAnalysisId)
-            </dt>
+<div class="jumbotron" >
+    <div class="container">
+        <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-right: 5px; margin-bottom:5px; padding-bottom:12px;" align="center">
+            <div class="col-lg-">
+                <h3 class="headingstyle1">Report for @Html.DisplayNameFor(model => model.Address)</h3>
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FourSquareAnalysisId)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.FourSquareAnalysisId)
-            </dd>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.FourSquareAnalysisId)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.FourSquareDateRan)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FourSquareDateRan)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.FourSquareDateRan)
-            </dd>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.FourSquareDateRan)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.PropertyId)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PropertyId)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.PropertyId)
-            </dd>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.PropertyId)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Address)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Address)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Address)
-            </dd>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.Address)
+                    </dd>
+                </dl>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MarketRentValue)
-            </dt>
+                <h3 class="headingstyle1">Monthly Revenue</h3>
+                <dl class="dl-horizontal">
 
-            <dd>
-                @Html.DisplayFor(model => model.MarketRentValue)
-            </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyLaundryIncome)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MarketRentValue)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyLaundryIncome)
-            </dd>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MarketRentValue)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyMiscIncome)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyLaundryIncome)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyMiscIncome)
-            </dd>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MonthlyLaundryIncome)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.TotalMonthlyIncome)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyMiscIncome)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.TotalMonthlyIncome)
-            </dd>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MonthlyMiscIncome)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyMortgageExpense)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.TotalMonthlyIncome)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyMortgageExpense)
-            </dd>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.TotalMonthlyIncome)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyRentalInsuranceExpense)
-            </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyRentalInsuranceExpense)
-            </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyTaxExpense)
-            </dt>
+                </dl>
+            </div>
+        </div>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyTaxExpense)
-            </dd>
+        <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-left:0px; margin-right:0px; margin-bottom: 5px; " align="center">
+            <div class="col-lg-">
+                <h3 class="headingstyle1">Monthly Expenses</h3>
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyMortgageExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyUtilityExpense)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MonthlyMortgageExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyUtilityExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyRentalInsuranceExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyHoaExpense)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MonthlyRentalInsuranceExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyHoaExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyHoaExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyPropertyServiceExpense)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MonthlyHoaExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyPropertyServiceExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyPropertyServiceExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyVacancyExpense)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MonthlyPropertyServiceExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyVacancyExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyTaxExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyRepairExpense)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MonthlyTaxExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyRepairExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyRepairExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyManagementExpense)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MonthlyRepairExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyManagementExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyUtilityExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.TotalMonthlyPropertyExpenses)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MonthlyUtilityExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.TotalMonthlyPropertyExpenses)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyVacancyExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.TotalMonthlyCashFlow)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MonthlyVacancyExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.TotalMonthlyCashFlow)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyManagementExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.EstDownPayment)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.MonthlyManagementExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.EstDownPayment)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.TotalMonthlyPropertyExpenses)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.EstClosingCost)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.TotalMonthlyPropertyExpenses)
+                    </dd>
+                </dl>
+                <br />
+                <br />
+            </div>
+        </div>
 
-            <dd>
-                @Html.DisplayFor(model => model.EstClosingCost)
-            </dd>
+        <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-left:-15px; margin-right:0px; margin-bottom: 5px; " align="center">
+            <div class="col-lg-">
+                <h3 class="headingstyle1">Monthly Cash Flow</h3>
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.TotalMonthlyIncome)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.EstRehabBudget)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.TotalMonthlyIncome)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.EstRehabBudget)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.TotalMonthlyPropertyExpenses)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.EstTotalInvestment)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.TotalMonthlyPropertyExpenses)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.EstTotalInvestment)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.TotalMonthlyCashFlow)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.EstAnnaulCashFlow)
-            </dt>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.TotalMonthlyCashFlow)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.EstAnnaulCashFlow)
-            </dd>
+                </dl>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.TotalCtcRoi)
-            </dt>
+        <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-left:6px; margin-right:0px; margin-bottom: 5px; " align="center">
+            <div class="col-lg-">
+                <h3 class="headingstyle1">Return on Investment</h3>
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EstDownPayment)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.TotalCtcRoi)
-            </dd>
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.EstDownPayment)
+                    </dd>
 
-        </dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EstClosingCost)
+                    </dt>
+
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.EstClosingCost)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EstRehabBudget)
+                    </dt>
+
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.EstRehabBudget)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EstTotalInvestment)
+                    </dt>
+
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.EstTotalInvestment)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EstAnnaulCashFlow)
+                    </dt>
+
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.EstAnnaulCashFlow)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.TotalCtcRoi)
+                    </dt>
+
+                    <dd align="center">
+                        @Html.DisplayFor(model => model.TotalCtcRoi)
+                    </dd>
+
+                </dl>
+                
+
+            </div>
+        </div>
+
+
+
+
     </div>
+
+
+
+
     <p>
-       
+
         @Html.ActionLink("View All Four-Square Reports", "Index")
     </p>
 </div>

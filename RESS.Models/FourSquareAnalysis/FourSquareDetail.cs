@@ -36,25 +36,25 @@ namespace RESS.Models.FourSquareAnalysis
         public decimal TotalMonthlyIncome { get; set; }
 
         // Monthly Expenses
-        [Display(Name = " Estimated Monthly Mortgage Expense")]
+        [Display(Name = "Mortgage Expense")]
         public decimal MonthlyMortgageExpense { get; set; }
-        [Display(Name = "Estimated Monthly Rental Insurance Expense")]
+        [Display(Name = "Rental Insurance Expense")]
         public decimal MonthlyRentalInsuranceExpense { get; set; }
-        [Display(Name = "Estimated Monthly Tax Expense")]
+        [Display(Name = "Tax Expense")]
         public decimal MonthlyTaxExpense { get; set; }
-        [Display(Name = "Estimated Monthly Utility Expense")]
+        [Display(Name = "Utility Expense")]
         public decimal MonthlyUtilityExpense { get; set; }
-        [Display(Name = "Estimated Monthly HOA Expense")]
+        [Display(Name = "HOA Expense")]
         public decimal MonthlyHoaExpense { get; set; }
-        [Display(Name = "Estimated Monthly Property Service Expense")]
+        [Display(Name = "Property Service Expense")]
         public decimal MonthlyPropertyServiceExpense { get; set; }
-        [Display(Name = "Estimated Monthly Vacancy Expense")]
+        [Display(Name = "Vacancy Expense")]
         public decimal MonthlyVacancyExpense { get; set; }
-        [Display(Name = "Estimated Monthly Repair Expense")]
+        [Display(Name = "Repair Expense")]
         public decimal MonthlyRepairExpense { get; set; }
-        [Display(Name = "Estimated Monthly Management Expense")]
+        [Display(Name = "Management Expense")]
         public decimal MonthlyManagementExpense { get; set; }
-        [Display(Name = "Total Monthly Property Expense")]
+        [Display(Name = "Total Monthly Expenses")]
         public decimal TotalMonthlyPropertyExpenses { get; set; }
 
         // Monthly Cash Flow
