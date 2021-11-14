@@ -16,11 +16,12 @@ namespace RESS.Models.CapitalizationRate
         public int CapitalizationRateAnalysisId { get; set; }
         [Display(Name = "Ran on")]
         public DateTime CapRateRunDate { get; set; }
+        public string PropAddress { get; set; }
 
         [ForeignKey(nameof(Property))]
         [Display(Name = "Property ID")]
         public int PropertyId { get; set; }
-        public string Address { get; set; }
+        
         public virtual Property Property { get; set; }
 
         [ForeignKey(nameof(Owner))]

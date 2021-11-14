@@ -15,28 +15,25 @@ namespace RESS.Models.CapitalizationRate
         
         [Display(Name = "Ran on")]
         public DateTime CapRateRunDate { get; set; }
+        [Display(Name = "Property Address")]
+        public string PropAddress { get; set; }
 
         [ForeignKey(nameof(Property))]
         [Display(Name = "Property ID")]
         public int PropertyId { get; set; }
-        public string Address { get; set; }
-        [Display(Name = "Market Rent Value")]
-        public decimal MarketRentValue { get; set; }
-        [Display(Name = "Property Market Value")]
-        public decimal MarketValue { get; set; }
+        
         public virtual Property Property { get; set; }
 
         [ForeignKey(nameof(Owner))]
         [Display(Name = "Owner ID")]
         public int OwnerId { get; set; }
-        [Display(Name = "Property Purchase Price")]
-        public decimal PurchasePrice { get; set; }
-        [Display(Name = "Duration of Ownership")]
-        public TimeSpan OwnedDuration { get; set; }
+        
         public virtual Data.Owner Owner { get; set; }
 
 
         // Monhtly Income
+        [Display(Name = "Monthly Rental Income")]
+        public decimal RentalIncome { get; set; }
         [Display(Name = "Estimated Monthly Laundry Income")]
         public decimal MonthlyLaundryIncome { get; set; }
         [Display(Name = "Estimated Monthly Misc Income")]
@@ -70,6 +67,12 @@ namespace RESS.Models.CapitalizationRate
         public decimal AnnualNetOperatingIncome { get; set; }
         [Display(Name = "Annual Rent Increase")]
         public float AnnualRentIncreasePercent { get; set; }
+        [Display(Name = "Property Market Value")]
+        public decimal PropMarketValue { get; set; }
+        [Display(Name = "Property Purchase Price")]
+        public decimal PropPurchasePrice { get; set; }
+        [Display(Name = "Duration of Ownership")]
+        public TimeSpan PropOwnedDuration { get; set; }
 
         // CapRate
         [Display(Name = "Current Capitalization Rate")]

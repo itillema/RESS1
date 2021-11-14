@@ -143,15 +143,13 @@ namespace RESS.Data
 
         // Owner Information
         public DateTime? PurchaseDate { get; set; }
-        public TimeSpan? OwnedDuration { get; set; }
+        public TimeSpan OwnedDuration { get; set; }
         public decimal? PurchasePrice { get; set; }
         public decimal? DownPayment { get; set; }
         public decimal? MortgageAmount { get; set; }
 
         [ForeignKey(nameof(Owners))] // Need OWNER FIRST AND LAST NAME!!!
         public int OwnerId { get; set; }
-        public string OwnerFirstName { get; set; }
-        public string OwnerLastName { get; set; }
         
         public virtual Data.Owner Owners { get; set; }
 

@@ -25,11 +25,10 @@ namespace RESS.Data
         public int FourSquareAnalysisId { get; set; }
         public DateTime FourSquareDateRan { get; set; }
 
-        [ForeignKey(nameof(Property))]
+        [ForeignKey(nameof(Properties))]
         public int PropertyId { get; set; }
-        public string Address { get; set; }
-        public decimal MarketRentValue { get; set; } // remove
-        public virtual Property Property { get; set; }
+       
+        public virtual Property Properties { get; set; }
 
         
         // Monthly Income
