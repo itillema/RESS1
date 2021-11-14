@@ -109,11 +109,11 @@ namespace RESS.MVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.OwnerId != id)
-            {
-                ModelState.AddModelError("", "Owner ID Mismatch");
-                return View(model);
-            }
+            //if (model.OwnerId != id)
+            //{
+            //    ModelState.AddModelError("", "Owner ID Mismatch");
+            //    return View(model);
+            //}
             
             if (_service.UpdateOwner(model))
             {

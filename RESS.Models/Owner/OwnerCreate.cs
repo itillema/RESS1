@@ -11,6 +11,7 @@ namespace RESS.Models.Owner
 {
     public class OwnerCreate
     {
+        public int OwnerId { get; set; }
         [Required]
         [Display(Name = "Owner First Name")]
         public string OwnerFirstName { get; set; }

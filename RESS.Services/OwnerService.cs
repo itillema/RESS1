@@ -16,6 +16,7 @@ namespace RESS.Services
             var entity =
                 new Owner()
                 {
+                    OwnerId = model.OwnerId,
                     OwnerFirstName = model.OwnerFirstName,
                     OwnerLastName = model.OwnerLastName,
                     MobileNo = model.MobileNo,
@@ -82,7 +83,8 @@ namespace RESS.Services
                 var entity =
                     ctx
                         .Owners
-                        .Single(e => e.OwnerId == model.OwnerId);
+                        .Single(e => e.OwnerId == model.OwnerId);    //e => e.OwnerId == model.OwnerId
+
 
                 entity.OwnerFirstName = model.OwnerFirstName;
                 entity.OwnerLastName = model.OwnerLastName;

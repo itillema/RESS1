@@ -28,7 +28,7 @@ namespace RESS.Data
         [ForeignKey(nameof(Property))]
         public int PropertyId { get; set; }
         public string Address { get; set; }
-        public decimal MarketRentValue { get; set; }
+        public decimal MarketRentValue { get; set; } // remove
         public virtual Property Property { get; set; }
 
         
