@@ -15,16 +15,30 @@ namespace RESS.Models.NetOperatingIncome
         public int NetOperatingIncomeId { get; set; }
         [Display(Name = "Ran on")]
         public DateTime NOIRundate { get; set; }
+<<<<<<< HEAD
+=======
+        [Display(Name = "Property Address")]
+        public string PropAddress { get; set; }
+>>>>>>> c5f3994 (updated remote path)
 
         [ForeignKey(nameof(Property))]
         [Display(Name = "Property ID")]
         public int PropertyId { get; set; }
+<<<<<<< HEAD
         public string Address { get; set; }
         [Display(Name = "Rental Income")]
         public decimal MarketRentValue { get; set; }
         public virtual Property Property { get; set; }
 
         // Monthly Income
+=======
+        
+        public virtual Property Property { get; set; }
+
+        // Monthly Income
+        [Display(Name = "Monthly Rent Income")]
+        public decimal RentalIncome { get; set; }
+>>>>>>> c5f3994 (updated remote path)
         [Display(Name = "Estimated Monthly Laundry Income")]
         public decimal MonthlyLaundryIncome { get; set; }
         [Display(Name = "Estimated Monthly Misc Income")]

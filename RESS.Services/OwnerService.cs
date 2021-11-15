@@ -37,7 +37,11 @@ namespace RESS.Services
             {
                 var query =
                     ctx
+<<<<<<< HEAD
                         .Owners
+=======
+                        .Owners.Include("Properties")
+>>>>>>> c5f3994 (updated remote path)
                         .Select(
                             e =>
                                 new OwnerListItem
@@ -70,7 +74,11 @@ namespace RESS.Services
                         MobileNo = entity.MobileNo,
                         Email = entity.Email,
 
+<<<<<<< HEAD
                         OwnedProperties = entity.OwnedProperties
+=======
+                        
+>>>>>>> c5f3994 (updated remote path)
 
                     };
             }

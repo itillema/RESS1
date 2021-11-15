@@ -110,6 +110,7 @@
     <Compile Include="CapitalizationRateAnalysis.cs" />
     <Compile Include="FourSquareAnalysis.cs" />
     <Compile Include="IdentityModels.cs" />
+<<<<<<< HEAD
     <Compile Include="Migrations\202111041759557_MigrationRefactor3.cs" />
     <Compile Include="Migrations\202111041759557_MigrationRefactor3.Designer.cs">
       <DependentUpon>202111041759557_MigrationRefactor3.cs</DependentUpon>
@@ -117,6 +118,11 @@
     <Compile Include="Migrations\202111091750549_MigRefactor2.cs" />
     <Compile Include="Migrations\202111091750549_MigRefactor2.Designer.cs">
       <DependentUpon>202111091750549_MigRefactor2.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\202111142058426_FinalMigration2.cs" />
+    <Compile Include="Migrations\202111142058426_FinalMigration2.Designer.cs">
+      <DependentUpon>202111142058426_FinalMigration2.cs</DependentUpon>
+>>>>>>> c5f3994 (updated remote path)
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NetOperatingIncome.cs" />
@@ -158,11 +164,16 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\202111041759557_MigrationRefactor3.resx">
       <DependentUpon>202111041759557_MigrationRefactor3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111091750549_MigRefactor2.resx">
       <DependentUpon>202111091750549_MigRefactor2.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\202111142058426_FinalMigration2.resx">
+      <DependentUpon>202111142058426_FinalMigration2.cs</DependentUpon>
+>>>>>>> c5f3994 (updated remote path)
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

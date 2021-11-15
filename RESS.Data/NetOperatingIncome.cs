@@ -14,6 +14,10 @@ namespace RESS.Data
         [Key]
         public int NetOperatingIncomeId { get; set; }
         public DateTime NOIRundate { get; set; }
+<<<<<<< HEAD
+=======
+        public string PropAddress { get; set; }
+>>>>>>> c5f3994 (updated remote path)
 
         [ForeignKey(nameof(Property))]
         public int PropertyId { get; set; }
@@ -21,6 +25,10 @@ namespace RESS.Data
         public virtual Property Property { get; set; }
 
         // Monthly Income
+<<<<<<< HEAD
+=======
+        public decimal RentalIncome { get; set; }
+>>>>>>> c5f3994 (updated remote path)
         public decimal MonthlyLaundryIncome { get; set; }
         public decimal MonthlyMiscIncome { get; set; }
         public decimal TotalMonthlyIncome { get; set; }

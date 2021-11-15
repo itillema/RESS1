@@ -10,7 +10,10 @@ namespace RESS.Services
         bool DeleteFourSquare(int fourSquareId);
         IEnumerable<FourSquareListItem> GetFourSquare();
         FourSquareDetail GetFourSquareById(int id);
+<<<<<<< HEAD
         IEnumerable<FourSquareAnalysis> MostRecentFourSquareAnalysis();
+=======
+>>>>>>> c5f3994 (updated remote path)
         bool UpdateFourSquare(FourSquareEdit model);
     }
 }

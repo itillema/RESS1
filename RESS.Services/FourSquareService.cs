@@ -54,7 +54,7 @@ namespace RESS.Services
                     EstRehabBudget = model.EstRehabBudget,
                     EstTotalInvestment = model.EstDownPayment + model.EstClosingCost + model.EstRehabBudget,
                     EstAnnaulCashFlow = ((model.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense)) * 12,
-
+                    
                     TotalCtcRoi = (float)((((model.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense)) * 12) / (model.EstDownPayment + model.EstClosingCost + model.EstRehabBudget)),
                     InvestmentRisk = model.InvestmentRisk
 

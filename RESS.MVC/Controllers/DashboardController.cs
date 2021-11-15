@@ -15,6 +15,7 @@ namespace RESS.MVC.Controllers
         // GET: Dashboard
         public ActionResult Index()
         {
+<<<<<<< HEAD
             var capRateService = new CapitalizationRateService();
             var fourSqareService = new FourSquareService();
             var netOperatingIncomeService = new NetOperatingIncomeService();
@@ -22,6 +23,9 @@ namespace RESS.MVC.Controllers
             model.MostRecentCapRateAnalyses = capRateService.MostRecentCapitalizationRateAnalysis();
             model.MostRecentFourSqrAnalyses = fourSqareService.MostRecentFourSquareAnalysis();
             model.MostRecentNOIAnalyses = netOperatingIncomeService.MostNetOperatingIncomeAnalysis();
+=======
+            
+>>>>>>> c5f3994 (updated remote path)
 
             return View();
         }

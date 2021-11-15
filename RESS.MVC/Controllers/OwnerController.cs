@@ -92,6 +92,10 @@ namespace RESS.MVC.Controllers
             var model =
                 new OwnerEdit
                 {
+<<<<<<< HEAD
+=======
+                    OwnerId = detail.OwnerId,
+>>>>>>> c5f3994 (updated remote path)
                     OwnerFirstName = detail.OwnerFirstName,
                     OwnerLastName = detail.OwnerLastName,
                     MobileNo = detail.MobileNo,
@@ -114,7 +118,11 @@ namespace RESS.MVC.Controllers
             //    ModelState.AddModelError("", "Owner ID Mismatch");
             //    return View(model);
             //}
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> c5f3994 (updated remote path)
             if (_service.UpdateOwner(model))
             {
                 TempData["SaveResult"] = "Owner profile was successfully udpated.";

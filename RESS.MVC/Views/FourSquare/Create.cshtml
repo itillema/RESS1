@@ -16,10 +16,17 @@
             
 
             <div class="form-group">
+<<<<<<< HEAD
                 @Html.LabelFor(model => model.PropertyId, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.PropertyId, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.PropertyId, "", new { @class = "text-danger" })
+=======
+                @Html.LabelFor(model => model.Properties.PropertyId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Properties.PropertyId, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Properties.PropertyId, "", new { @class = "text-danger" })
+>>>>>>> c5f3994 (updated remote path)
                 </div>
             </div>
 
