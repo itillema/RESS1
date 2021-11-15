@@ -79,7 +79,7 @@ namespace RESS.Services
                                 {
                                     PropertyId = e.PropertyId,
                                     FourSquareDateRan = e.FourSquareDateRan,
-                                    Address = e.Address,
+                                    PropAddress = e.PropAddress,
                                     FourSquareAnalysisId = e.FourSquareAnalysisId,
 
 
