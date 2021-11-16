@@ -25,12 +25,12 @@ namespace RESS.Data
         public int FourSquareAnalysisId { get; set; }
         public DateTime FourSquareDateRan { get; set; }
 
-        public string PropAddress { get; set; }
+        
 
         //[ForeignKey(nameof(Properties))]
         public int PropertyId { get; set; }
        
-        
+        //nested link
 
         
         // Monthly Income
@@ -68,6 +68,8 @@ namespace RESS.Data
 
         [Required]
         public virtual Property Properties { get; set; }
+
+
 
     }
 }

@@ -18,9 +18,6 @@ namespace RESS.Models.FourSquareAnalysis
         [Display(Name = "Ran on")]
         public DateTime FourSquareDateRan { get; set; }
 
-        [Display(Name = "Property Address")]
-        public string PropAddress { get; set; }
-
         
         [Display(Name = "Property ID")]
         public int PropertyId { get; set; }

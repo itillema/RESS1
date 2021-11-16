@@ -1,4 +1,5 @@
 ﻿using RESS.Data;
+using RESS.Models;
 using RESS.Models.FourSquareAnalysis;
 using System;
 using System.Collections.Generic;
@@ -16,16 +17,17 @@ namespace RESS.Services
 
         public bool CreateFourSquare(FourSquareCreate model)
         {
-            
+            //var properties =   
             var entity =
                 new FourSquareAnalysis()
                 {
+                    
                     FourSquareDateRan = DateTime.UtcNow,
                     PropertyId = model.PropertyId,  //
-                    PropAddress = model.PropAddress,  //
+                    
                     FourSquareAnalysisId = model.FourSquareAnalysisId,
 
-                    RentalIncome = model.RentalIncome, //
+                    RentalIncome = model.RentalIncome,
                     MonthlyLaundryIncome = model.MonthlyLaundryIncome,
                     MonthlyMiscIncome = model.MonthlyMiscIncome,
                     TotalMonthlyIncome = model.RentalIncome + model.MonthlyLaundryIncome + model.MonthlyMiscIncome,
@@ -71,13 +73,20 @@ namespace RESS.Services
                             e =>
                                 new FourSquareListItem
                                 {
-                                    PropertyId = e.PropertyId,
+                                    PropertyId =ctx.Properties.Where(p => p.PropertyId == e.PropertyId)
+                                    .Select(p => new PropertyDetail
+                                    { 
+                                        PropertyId = p.PropertyId,
+                                        Address = p.Address,
+                                    }),
                                     FourSquareDateRan = e.FourSquareDateRan,
-                                    PropAddress = e.PropAddress,
+                                    
                                     FourSquareAnalysisId = e.FourSquareAnalysisId,
+                                    
 
 
                                 });
+
                 return query.ToArray().OrderByDescending(e => e.FourSquareDateRan );
             }
         }
@@ -95,7 +104,7 @@ namespace RESS.Services
                     {
                         FourSquareDateRan = entity.FourSquareDateRan,
                         PropertyId = entity.PropertyId,
-                        PropAddress = entity.PropAddress,
+                        
                         FourSquareAnalysisId = entity.FourSquareAnalysisId,
 
                         RentalIncome = entity.RentalIncome,

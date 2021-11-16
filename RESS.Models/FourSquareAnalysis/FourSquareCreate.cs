@@ -27,8 +27,7 @@ namespace RESS.Models.FourSquareAnalysis
 
         // Monthly Income
 
-        [Display(Name = "Property Address")]
-        public string PropAddress { get; set; }
+        
 
         //[ForeignKey(nameof(Properties))]
         //[Display(Name = "Property ID")]

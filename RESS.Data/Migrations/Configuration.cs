@@ -9,7 +9,7 @@ namespace RESS.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(RESS.Data.ApplicationDbContext context)

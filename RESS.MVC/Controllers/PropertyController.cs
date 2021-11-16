@@ -96,7 +96,7 @@ namespace RESS.MVC.Controllers
             var model =
                 new PropertyEdit
                 {
-
+                    //PropertyId = detail.PropertyId,
                     Address = detail.Address,
                     City = detail.City,
                     State = detail.State,
@@ -133,15 +133,11 @@ namespace RESS.MVC.Controllers
         [HttpPost]
         [ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult Update(int id,PropertyEdit model)
+        public ActionResult Update(PropertyEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.PropertyId != id)
-            {
-                ModelState.AddModelError("", "ID Mismatch");
-                return View(model);
-            }
+            
 
             if (_service.UpdateProperty(model))
             {

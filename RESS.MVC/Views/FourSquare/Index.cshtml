@@ -22,7 +22,7 @@
             </th>
             <th>
 
-                @Html.DisplayNameFor(model => model.PropAddress)
+                @Html.DisplayNameFor(model => model.PropertyId.Expression)
             </th>
             <th></th>
         </tr>
@@ -41,7 +41,7 @@
                 </td>
                 <td>
 
-                    @Html.DisplayFor(modelItem => item.PropAddress)
+                    @Html.DisplayFor(modelItem => item.PropertyId.Expression)
                 </td>
                 <td>
                     @Html.ActionLink("View Report", "Details", new { id=item.FourSquareAnalysisId }) |
