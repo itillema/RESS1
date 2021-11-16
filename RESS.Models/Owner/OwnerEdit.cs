@@ -29,13 +29,10 @@ namespace RESS.Models.Owner
         //public decimal DownPayment { get; set; }
         //[Display(Name = "Initial Mortgage Amount")]
         //public decimal MortgageAmount { get; set; }
-<<<<<<< HEAD
-        [Display(Name = "Properties for this Owner")]
-        public virtual ICollection<Property> OwnedProperties { get; set; }
-=======
+
         //[Display(Name = "Properties for this Owner")]
         //public virtual ICollection<Property> OwnedProperties { get; set; }
->>>>>>> c5f3994 (updated remote path)
+
 
     }
 }

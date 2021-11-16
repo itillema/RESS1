@@ -10,6 +10,6 @@ namespace RESS.Services
         bool DeleteCapitalizationRate(int capitalizationRateAnalysisId);
         IEnumerable<CapitalizationRateListItem> GetCapitalizationRate();
         CapitalizationRateDetail GetCapitalizationRateById(int id);
-        IEnumerable<CapitalizationRateAnalysis> MostRecentCapitalizationRateAnalysis();
+        
     }
 }

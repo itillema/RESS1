@@ -18,17 +18,17 @@ namespace RESS.Models.CapitalizationRate
         public DateTime CapRateRunDate { get; set; }
         public string PropAddress { get; set; }
 
-        [ForeignKey(nameof(Property))]
+        
         [Display(Name = "Property ID")]
         public int PropertyId { get; set; }
        
-        public virtual Property Property { get; set; }
+        
 
-        [ForeignKey(nameof(Owner))]
+        
         [Display(Name = "Owner ID")]
         public int OwnerId { get; set; }
         
-        public virtual Data.Owner Owner { get; set; }
+       
 
 
         // Monhtly Income

@@ -22,20 +22,12 @@ namespace RESS.Data
         //public decimal DownPayment { get; set; }
         //public decimal MortgageAmount { get; set; }
 
-<<<<<<< HEAD
-        public Owner()
-        {
-            this.OwnedProperties = new HashSet<Property>();
-        }
 
-        public virtual ICollection<Property> OwnedProperties { get; set; }
-=======
         //public Owner()
         //{
         //    this.OwnedProperties = new HashSet<Property>();
         //}
 
         //public virtual ICollection<Property> OwnedProperties { get; set; }
->>>>>>> c5f3994 (updated remote path)
     }
 }

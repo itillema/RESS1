@@ -24,22 +24,18 @@ namespace RESS.Data
         [Key]
         public int FourSquareAnalysisId { get; set; }
         public DateTime FourSquareDateRan { get; set; }
-<<<<<<< HEAD
-=======
-        public string PropAddress { get; set; }
->>>>>>> c5f3994 (updated remote path)
 
-        [ForeignKey(nameof(Properties))]
+        public string PropAddress { get; set; }
+
+       [ForeignKey(nameof(Properties))]
         public int PropertyId { get; set; }
        
         public virtual Property Properties { get; set; }
 
         
         // Monthly Income
-<<<<<<< HEAD
-=======
+
         public decimal RentalIncome { get; set; }
->>>>>>> c5f3994 (updated remote path)
         public decimal MonthlyLaundryIncome { get; set; }
         public decimal MonthlyMiscIncome { get; set; }
         public decimal TotalMonthlyIncome { get; set; }

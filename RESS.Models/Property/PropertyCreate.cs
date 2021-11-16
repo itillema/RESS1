@@ -52,11 +52,9 @@ namespace RESS.Models
         public float ThirdyDayChange { get; set; } //Percent
 
         // Owner Information
-<<<<<<< HEAD
-        [Display(Name = "Purchase Date")]
-=======
+
         [Display(Name = "Purchase Date (YYYY/MM/DD)")]
->>>>>>> c5f3994 (updated remote path)
+
         public DateTime? PurchaseDate { get; set; }
         [Display(Name = "Purchase Price")]
         public decimal? PurchasePrice { get; set; }

@@ -53,11 +53,9 @@ namespace RESS.Models
         [Display(Name = "Purchase Date")]
         public DateTime? PurchaseDate { get; set; }
         [Display(Name = "Duration of Ownership")]
-<<<<<<< HEAD
-        public TimeSpan? OwnedDuration { get; set; }
-=======
+
         public TimeSpan OwnedDuration { get; set; }
->>>>>>> c5f3994 (updated remote path)
+
         [Display(Name = "Purchase Price")]
         public decimal? PurchasePrice { get; set; }
         [Display(Name = "Down Payment")]
@@ -65,18 +63,12 @@ namespace RESS.Models
         [Display(Name = "Mortgage Amount")]
         public decimal? MortgageAmount { get; set; }
 
-        [ForeignKey(nameof(Owners))]
+        
         [Display(Name = "Owner ID")]
         public int OwnerId { get; set; }
-<<<<<<< HEAD
-        public string OwnerFirstName { get; set; }
-        public string OwnerLastName { get; set; }
-=======
-       
->>>>>>> c5f3994 (updated remote path)
-        public virtual Data.Owner Owners { get; set; }
 
-        //Tenant List
-        public virtual ICollection<Data.Tenant> Tenants { get; set; }
+       
+
+        
     }
 }

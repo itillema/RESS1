@@ -91,7 +91,7 @@ namespace RESS.Services
                         LeaseDuration = entity.LeaseDuration,
                         SecurityDeposit = entity.SecurityDeposit,
                         RentAmount = entity.RentAmount,
-                        Properties = entity.Properties
+                        //Properties = entity.Properties
 
                     };
             }
@@ -114,7 +114,7 @@ namespace RESS.Services
                 entity.LeaseEnd = model.LeaseEnd;
                 entity.SecurityDeposit = model.SecurityDeposit;
                 entity.RentAmount = model.RentAmount;
-                entity.Properties = model.Properties;
+                //entity.Properties = model.Properties;
 
                 return ctx.SaveChanges() == 1;
 

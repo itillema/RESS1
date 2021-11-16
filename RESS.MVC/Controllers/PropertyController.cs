@@ -123,8 +123,7 @@ namespace RESS.MVC.Controllers
                     PurchaseDate = detail.PurchaseDate,
                     DownPayment = detail.DownPayment,
                     MortgageAmount = detail.MortgageAmount,
-                    Owners = detail.Owners,
-                    Tenants = detail.Tenants
+                    
 
                 };
             return View(model);

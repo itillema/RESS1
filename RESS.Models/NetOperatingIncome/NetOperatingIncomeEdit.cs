@@ -14,7 +14,7 @@ namespace RESS.Models.NetOperatingIncome
         public int NetOperatingIncomeId { get; set; }
         public DateTime NOIRundate { get; set; }
 
-        [ForeignKey(nameof(Property))]
+       
         [Display(Name = "Property ID")]
         public int PropertyId { get; set; }
         public virtual Property Property { get; set; }

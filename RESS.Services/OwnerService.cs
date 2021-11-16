@@ -37,11 +37,9 @@ namespace RESS.Services
             {
                 var query =
                     ctx
-<<<<<<< HEAD
-                        .Owners
-=======
+
                         .Owners.Include("Properties")
->>>>>>> c5f3994 (updated remote path)
+
                         .Select(
                             e =>
                                 new OwnerListItem
@@ -74,11 +72,7 @@ namespace RESS.Services
                         MobileNo = entity.MobileNo,
                         Email = entity.Email,
 
-<<<<<<< HEAD
-                        OwnedProperties = entity.OwnedProperties
-=======
-                        
->>>>>>> c5f3994 (updated remote path)
+
 
                     };
             }
@@ -93,7 +87,7 @@ namespace RESS.Services
                         .Owners
                         .Single(e => e.OwnerId == model.OwnerId);    //e => e.OwnerId == model.OwnerId
 
-
+                entity.OwnerId = model.OwnerId;
                 entity.OwnerFirstName = model.OwnerFirstName;
                 entity.OwnerLastName = model.OwnerLastName;
                 entity.MobileNo = model.MobileNo;

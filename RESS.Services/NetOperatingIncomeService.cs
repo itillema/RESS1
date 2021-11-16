@@ -26,23 +26,15 @@ namespace RESS.Services
                 new NetOperatingIncome()
                 {
                     NOIRundate = DateTime.UtcNow,
-<<<<<<< HEAD
-                    PropertyId = model.PropertyId,
-                    Address = model.Address,
 
-                    MarketRentValue = model.MarketRentValue,
+                    PropertyId = model.Properties.PropertyId,
+                    PropAddress = model.Properties.Address,
+
+                    RentalIncome = model.Properties.MarketRentValue,
                     MonthlyLaundryIncome = model.MonthlyLaundryIncome,
                     MonthlyMiscIncome = model.MonthlyMiscIncome,
-                    TotalMonthlyIncome = model.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome,
-=======
-                    PropertyId = model.Property.PropertyId,
-                    PropAddress = model.Property.Address,
+                    TotalMonthlyIncome = model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome,
 
-                    RentalIncome = model.Property.MarketRentValue,
-                    MonthlyLaundryIncome = model.MonthlyLaundryIncome,
-                    MonthlyMiscIncome = model.MonthlyMiscIncome,
-                    TotalMonthlyIncome = model.Property.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome,
->>>>>>> c5f3994 (updated remote path)
 
                     MonthlyMortgageExpense = model.MonthlyMortgageExpense,
                     MonthlyRentalInsuranceExpense = model.MonthlyRentalInsuranceExpense,
@@ -54,21 +46,14 @@ namespace RESS.Services
                     MonthlyManagementExpense = model.MonthlyManagementExpense,
                     TotalMonthlyPropertyExpenses = model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense,
 
-<<<<<<< HEAD
-                    AnnualNetOperatingIncome = (model.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense),
+
+                    AnnualNetOperatingIncome = (model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense),
                     AnnualRentIncreasePercent = model.AnnualRentIncreasePercent,
 
-                    FiveYearNoi = ((model.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 5)),
-                    FifteenYearNoi = ((model.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 15)),
-                    ThirtyYearNoi = ((model.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 30))
-=======
-                    AnnualNetOperatingIncome = (model.Property.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense),
-                    AnnualRentIncreasePercent = model.AnnualRentIncreasePercent,
+                    FiveYearNoi = ((model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 5)),
+                    FifteenYearNoi = ((model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 15)),
+                    ThirtyYearNoi = ((model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 30))
 
-                    FiveYearNoi = ((model.Property.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 5)),
-                    FifteenYearNoi = ((model.Property.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 15)),
-                    ThirtyYearNoi = ((model.Property.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyPropertyServiceExpense + model.MonthlyHoaExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 30))
->>>>>>> c5f3994 (updated remote path)
 
                 };
             using (var ctx = new ApplicationDbContext())
@@ -92,11 +77,9 @@ namespace RESS.Services
                                     NetOperatingIncomeId = e.NetOperatingIncomeId,
                                     NOIRundate = e.NOIRundate,
                                     PropertyId = e.PropertyId,
-<<<<<<< HEAD
-                                    Address = e.Address,
-=======
+
                                     PropAddress = e.PropAddress,
->>>>>>> c5f3994 (updated remote path)
+
 
 
                                 });
@@ -118,15 +101,11 @@ namespace RESS.Services
                         NetOperatingIncomeId = entity.NetOperatingIncomeId,
                         NOIRundate = entity.NOIRundate,
                         PropertyId = entity.PropertyId,
-<<<<<<< HEAD
-                        Address = entity.Address,
 
-                        MarketRentValue = entity.MarketRentValue,
-=======
                         PropAddress = entity.PropAddress,
 
                         RentalIncome = entity.RentalIncome,
->>>>>>> c5f3994 (updated remote path)
+
                         MonthlyLaundryIncome = entity.MonthlyLaundryIncome,
                         MonthlyMiscIncome = entity.MonthlyMiscIncome,
                         TotalMonthlyIncome = entity.TotalMonthlyIncome,

@@ -11,14 +11,7 @@ namespace RESS.Services
     public class CapitalizationRateService : ICapitalizationRateService
     {
 
-        public IEnumerable<CapitalizationRateAnalysis> MostRecentCapitalizationRateAnalysis()
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var query = ctx.CapitalizationRateAnalyses.Include("Property").Include("Owner").OrderByDescending(a => a.CapRateRunDate);
-                return query.ToArray();
-            }
-        }
+        
 
 
 
@@ -28,14 +21,14 @@ namespace RESS.Services
                 new CapitalizationRateAnalysis()
                 {
                     CapRateRunDate = DateTime.UtcNow,
-                    PropertyId = model.Property.PropertyId,
-                    OwnerId = model.Owner.OwnerId,
-                    PropAddress = model.Property.Address,
+                    PropertyId = model.Properties.PropertyId,
+                    OwnerId = model.Owners.OwnerId,
+                    PropAddress = model.Properties.Address,
 
-                    RentalIncome = model.Property.MarketRentValue,
+                    RentalIncome = model.Properties.MarketRentValue,
                     MonthlyLaundryIncome = model.MonthlyLaundryIncome,
                     MonthlyMiscIncome = model.MonthlyMiscIncome,
-                    TotalMonthlyIncome = model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Property.MarketRentValue,
+                    TotalMonthlyIncome = model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Properties.MarketRentValue,
 
                     MonthlyMortgageExpense = model.MonthlyMortgageExpense,
                     MonthlyRentalInsuranceExpense = model.MonthlyRentalInsuranceExpense,
@@ -47,17 +40,17 @@ namespace RESS.Services
                     MonthlyManagementExpense = model.MonthlyManagementExpense,
                     TotalMonthlyPropertyExpenses = model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense,
 
-                    AnnualNetOperatingIncome = ((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Property.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12,
+                    AnnualNetOperatingIncome = ((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Properties.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12,
                     AnnualRentIncreasePercent = model.AnnualRentIncreasePercent,
-                    PropMarketValue = model.Property.MarketValue,
-                    PropPurchasePrice = (decimal)model.Property.PurchasePrice,
-                    PropOwnedDuration = model.Property.OwnedDuration,
+                    PropMarketValue = model.Properties.MarketValue,
+                    PropPurchasePrice = (decimal)model.Properties.PurchasePrice,
+                    PropOwnedDuration = model.Properties.OwnedDuration,
 
-                    CurrentCapitalizationRate = (float)((((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Property.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12) / model.Property.PurchasePrice),
-                    EstFiveYearCapitalizationRate = (float)((((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Property.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12) / (decimal)(model.Property.MarketValue) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 5))),
-                    EstFifteenYearCapitalizationRate = (float)((((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Property.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12) / (decimal)(model.Property.MarketValue) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 15))),
-                    EstThirtyYearCapitalizationRate = (float)((((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Property.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12) / (decimal)(model.Property.MarketValue) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 30))),
-                    OwnedDurationCapitalizationRate = (float)((((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Property.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12) / (decimal)(model.Property.MarketValue) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, model.Property.OwnedDuration.TotalDays)))
+                    CurrentCapitalizationRate = (float)((((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Properties.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12) / model.Properties.PurchasePrice),
+                    EstFiveYearCapitalizationRate = (float)((((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Properties.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12) / (decimal)(model.Properties.MarketValue) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 5))),
+                    EstFifteenYearCapitalizationRate = (float)((((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Properties.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12) / (decimal)(model.Properties.MarketValue) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 15))),
+                    EstThirtyYearCapitalizationRate = (float)((((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Properties.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12) / (decimal)(model.Properties.MarketValue) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, 30))),
+                    OwnedDurationCapitalizationRate = (float)((((model.MonthlyLaundryIncome + model.MonthlyMiscIncome + model.Properties.MarketRentValue) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyVacancyExpense + model.MonthlyRepairExpense + model.MonthlyManagementExpense)) * 12) / (decimal)(model.Properties.MarketValue) * (decimal)(1 + Math.Pow(model.AnnualRentIncreasePercent, model.Properties.OwnedDuration.TotalDays)))
 
                 };
             using (var ctx = new ApplicationDbContext())
@@ -80,9 +73,9 @@ namespace RESS.Services
                                 {
                                     CapitalizationRateAnalysisId = e.CapitalizationRateAnalysisId,
                                     CapRateRunDate = e.CapRateRunDate,
-                                    PropAddress = e.Property.Address,
-                                    PropertyId = e.Property.PropertyId,
-                                    OwnerId = e.Owner.OwnerId
+                                    PropAddress = e.Properties.Address,
+                                    PropertyId = e.Properties.PropertyId,
+                                    OwnerId = e.Owners.OwnerId
 
                                 });
                 return query.ToArray().OrderByDescending(e => e.CapRateRunDate);

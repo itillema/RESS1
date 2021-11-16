@@ -124,11 +124,11 @@ namespace RESS.MVC.Controllers
                 return View(model);
             }
             
-            if (_service.UpdateFourSquare(model))
-            {
-                TempData["SaveResult"] = "Four Square Analysis was successfully udpated and re-run.";
-                return RedirectToAction("Index");
-            }
+            //if (_service.UpdateFourSquare(model))
+            //{
+            //    TempData["SaveResult"] = "Four Square Analysis was successfully udpated and re-run.";
+            //    return RedirectToAction("Index");
+            //}
 
             ModelState.AddModelError("", "Four Square Analysis could not be updated or re-run.");
             return View();

@@ -21,7 +21,7 @@
                 @Html.DisplayNameFor(model => model.PropertyId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Address)
+                @Html.DisplayNameFor(model => model.PropAddress)
             </th>
             <th></th>
         </tr>
@@ -39,7 +39,7 @@
                     @Html.DisplayFor(modelItem => item.PropertyId)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Address)
+                    @Html.DisplayFor(modelItem => item.PropAddress)
                 </td>
                 <td>
                     @Html.ActionLink("View Report", "Details", new { id=item.NetOperatingIncomeId }) |

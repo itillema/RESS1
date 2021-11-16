@@ -16,15 +16,15 @@ namespace RESS.Data
         public DateTime CapRateRunDate { get; set; }
         public string PropAddress { get; set; }
 
-        [ForeignKey(nameof(Property))]
+        [ForeignKey(nameof(Properties))]
         public int PropertyId { get; set; }
         
-        public virtual Property Property { get; set; }
+        public virtual Property Properties { get; set; }
 
-        [ForeignKey(nameof(Owner))]
+        [ForeignKey(nameof(Owners))]
         public int OwnerId { get; set; }
         
-        public virtual Owner Owner { get; set; }
+        public virtual Owner Owners { get; set; }
 
 
         // Monhtly Income

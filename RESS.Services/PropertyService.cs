@@ -46,7 +46,7 @@ namespace RESS.Services
                     PurchasePrice = model.PurchasePrice,
                     DownPayment = model.DownPayment,
                     MortgageAmount = model.MortgageAmount,
-                    Tenants = listOfTenants
+                    
 
 
                 };
@@ -119,16 +119,13 @@ namespace RESS.Services
                         MarketRentValue = entity.MarketRentValue,
                         ThirdyDayChange = (float)entity.ThirdyDayChange,
                         PurchaseDate = entity.PurchaseDate,
-<<<<<<< HEAD
-                        OwnedDuration = DateTime.Now - entity.PurchaseDate,
-=======
+
                         OwnedDuration = (TimeSpan)(DateTime.Now - entity.PurchaseDate),
->>>>>>> c5f3994 (updated remote path)
+
                         PurchasePrice = entity.PurchasePrice,
                         DownPayment = entity.DownPayment,
                         MortgageAmount = entity.MortgageAmount,
-                        Owners = entity.Owners,
-                        Tenants = entity.Tenants
+                        
 
                     };
             }
@@ -174,8 +171,7 @@ namespace RESS.Services
                 entity.PurchasePrice = model.PurchasePrice;
                 entity.DownPayment = model.DownPayment;
                 entity.MortgageAmount = model.MortgageAmount;
-                entity.Owners = model.Owners;
-                entity.Tenants = listOfTenants;
+                
                 
 
                 return ctx.SaveChanges() == 1;

@@ -54,7 +54,7 @@ namespace RESS.MVC.Controllers
                 return RedirectToAction("Index");
             };
 
-            ModelState.AddModelError("", "CapitalizationRate could not be created.");
+            ModelState.AddModelError("", "Capitalization Rate Analysis could not be created.");
 
             return View(model);
         }

@@ -12,14 +12,7 @@ namespace RESS.Services
     {
 
 
-        public IEnumerable<FourSquareAnalysis> MostRecentFourSquareAnalysis()
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var query = ctx.FourSquareAnalyses.Include("Property").OrderByDescending(a => a.FourSquareDateRan);
-                return query.ToArray();
-            }
-        }
+        
 
         public bool CreateFourSquare(FourSquareCreate model)
         {
@@ -28,14 +21,14 @@ namespace RESS.Services
                 new FourSquareAnalysis()
                 {
                     FourSquareDateRan = DateTime.UtcNow,
-                    PropertyId = model.PropertyId,
-                    Address = model.Address,
+                    PropertyId = model.Properties.PropertyId,  //
+                    PropAddress = model.Properties.Address,  //
                     FourSquareAnalysisId = model.FourSquareAnalysisId,
 
-                    MarketRentValue = model.MarketRentValue,
+                    RentalIncome = model.Properties.MarketRentValue, //
                     MonthlyLaundryIncome = model.MonthlyLaundryIncome,
                     MonthlyMiscIncome = model.MonthlyMiscIncome,
-                    TotalMonthlyIncome = model.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome,
+                    TotalMonthlyIncome = model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome,
 
                     MonthlyMortgageExpense = model.MonthlyMortgageExpense,
                     MonthlyRentalInsuranceExpense = model.MonthlyRentalInsuranceExpense,
@@ -48,19 +41,20 @@ namespace RESS.Services
                     MonthlyManagementExpense = model.MonthlyManagementExpense,
                     TotalMonthlyPropertyExpenses = model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense,
 
-                    TotalMonthlyCashFlow = (model.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense),
+                    TotalMonthlyCashFlow = (model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense),
                     EstDownPayment = model.EstDownPayment,
                     EstClosingCost = model.EstClosingCost,
                     EstRehabBudget = model.EstRehabBudget,
                     EstTotalInvestment = model.EstDownPayment + model.EstClosingCost + model.EstRehabBudget,
-                    EstAnnaulCashFlow = ((model.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense)) * 12,
+                    EstAnnaulCashFlow = ((model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense)) * 12,
                     
-                    TotalCtcRoi = (float)((((model.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense)) * 12) / (model.EstDownPayment + model.EstClosingCost + model.EstRehabBudget)),
-                    InvestmentRisk = model.InvestmentRisk
+                    TotalCtcRoi = (float)((((model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense)) * 12) / (model.EstDownPayment + model.EstClosingCost + model.EstRehabBudget)),
+                    
 
                 };
             using (var ctx = new ApplicationDbContext())
             {
+                
                 ctx.FourSquareAnalyses.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
@@ -101,10 +95,10 @@ namespace RESS.Services
                     {
                         FourSquareDateRan = entity.FourSquareDateRan,
                         PropertyId = entity.PropertyId,
-                        Address = entity.Address,
+                        PropAddress = entity.PropAddress,
                         FourSquareAnalysisId = entity.FourSquareAnalysisId,
 
-                        MarketRentValue = entity.MarketRentValue,
+                        RentalIncome = entity.RentalIncome,
                         MonthlyLaundryIncome = entity.MonthlyLaundryIncome,
                         MonthlyMiscIncome = entity.MonthlyMiscIncome,
                         TotalMonthlyIncome = entity.TotalMonthlyIncome,
@@ -134,35 +128,35 @@ namespace RESS.Services
             }
         }
 
-        public bool UpdateFourSquare(FourSquareEdit model)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity =
-                    ctx
-                        .FourSquareAnalyses
-                        .Single(e => e.FourSquareAnalysisId == model.FourSquareAnalysisId);
+        //public bool UpdateFourSquare(FourSquareEdit model)
+        //{
+        //    using (var ctx = new ApplicationDbContext())
+        //    {
+        //        var entity =
+        //            ctx
+        //                .FourSquareAnalyses
+        //                .Single(e => e.FourSquareAnalysisId == model.FourSquareAnalysisId);
 
 
-                entity.MonthlyLaundryIncome = model.MonthlyLaundryIncome;
-                entity.MonthlyMiscIncome = model.MonthlyMiscIncome;
-                entity.MonthlyMortgageExpense = model.MonthlyMortgageExpense;
-                entity.MonthlyRentalInsuranceExpense = model.MonthlyRentalInsuranceExpense;
-                entity.MonthlyTaxExpense = model.MonthlyTaxExpense;
-                entity.MonthlyUtilityExpense = model.MonthlyTaxExpense;
-                entity.MonthlyHoaExpense = model.MonthlyHoaExpense;
-                entity.MonthlyPropertyServiceExpense = model.MonthlyPropertyServiceExpense;
-                entity.MonthlyRepairExpense = model.MonthlyRepairExpense;
-                entity.MonthlyVacancyExpense = model.MonthlyVacancyExpense;
-                entity.MonthlyManagementExpense = model.MonthlyManagementExpense;
-                entity.EstDownPayment = model.EstDownPayment;
-                entity.EstClosingCost = model.EstClosingCost;
-                entity.EstRehabBudget = model.EstRehabBudget;
+        //        entity.MonthlyLaundryIncome = model.MonthlyLaundryIncome;
+        //        entity.MonthlyMiscIncome = model.MonthlyMiscIncome;
+        //        entity.MonthlyMortgageExpense = model.MonthlyMortgageExpense;
+        //        entity.MonthlyRentalInsuranceExpense = model.MonthlyRentalInsuranceExpense;
+        //        entity.MonthlyTaxExpense = model.MonthlyTaxExpense;
+        //        entity.MonthlyUtilityExpense = model.MonthlyTaxExpense;
+        //        entity.MonthlyHoaExpense = model.MonthlyHoaExpense;
+        //        entity.MonthlyPropertyServiceExpense = model.MonthlyPropertyServiceExpense;
+        //        entity.MonthlyRepairExpense = model.MonthlyRepairExpense;
+        //        entity.MonthlyVacancyExpense = model.MonthlyVacancyExpense;
+        //        entity.MonthlyManagementExpense = model.MonthlyManagementExpense;
+        //        entity.EstDownPayment = model.EstDownPayment;
+        //        entity.EstClosingCost = model.EstClosingCost;
+        //        entity.EstRehabBudget = model.EstRehabBudget;
 
-                return ctx.SaveChanges() == 1;
+        //        return ctx.SaveChanges() == 1;
 
-            }
-        }
+        //    }
+        //}
 
         public bool DeleteFourSquare(int fourSquareId)
         {

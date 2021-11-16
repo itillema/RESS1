@@ -17,33 +17,21 @@ namespace RESS.Models.FourSquareAnalysis
         public int FourSquareAnalysisId { get; set; }
         [Display(Name = "Ran on")]
         public DateTime FourSquareDateRan { get; set; }
-<<<<<<< HEAD
 
-        [ForeignKey(nameof(Property))]
-        [Display(Name = "Property ID")]
-        public int PropertyId { get; set; }
-        public string Address { get; set; }
-        [Display(Name = "Market Rent Value")]
-        public decimal MarketRentValue { get; set; }
-        public virtual Property Property { get; set; }
-
-
-        // Monthly Income
-=======
         [Display(Name = "Property Address")]
         public string PropAddress { get; set; }
 
-        [ForeignKey(nameof(Properties))]
+        
         [Display(Name = "Property ID")]
         public int PropertyId { get; set; }
         
-        public virtual Property Properties { get; set; }
+        
 
 
         // Monthly Income
         [Display(Name = "Monthly Rent Income")]
         public decimal RentalIncome { get; set; }
->>>>>>> c5f3994 (updated remote path)
+
         [Display(Name = "Monthly Laundry Income")]
         public decimal MonthlyLaundryIncome { get; set; }
         [Display(Name = "Monthly Misc Income")]
@@ -94,5 +82,7 @@ namespace RESS.Models.FourSquareAnalysis
         // Analytic Result Summary
         [Display(Name = "Investment Risk Summary")]
         public InvestmentRiskType InvestmentRisk { get; set; }
+
+        
     }
 }
