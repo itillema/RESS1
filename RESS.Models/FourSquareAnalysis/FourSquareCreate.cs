@@ -90,7 +90,7 @@ namespace RESS.Models.FourSquareAnalysis
 
         
 
-        public virtual Property Properties { get; set; }
+       
 
 
     }

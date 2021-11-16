@@ -70,7 +70,7 @@ namespace RESS.Models.NetOperatingIncome
         [Display(Name = "Projected 30 Year Net Operating Income")]
         public decimal ThirtyYearNoi { get; set; }
 
-        public Property Properties { get; set; }
+        
 
     }
 }

@@ -86,7 +86,6 @@ namespace RESS.Models.CapitalizationRate
         [Display(Name = "Ownered Duration Capitalization Rate")]
         public float OwnedDurationCapitalizationRate { get; set; }
 
-        public Property Properties { get; set; }
-        public Data.Owner Owners { get; set; }
+        
     }
 }

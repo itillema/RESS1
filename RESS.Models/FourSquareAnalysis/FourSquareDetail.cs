@@ -81,7 +81,7 @@ namespace RESS.Models.FourSquareAnalysis
 
         // Analytic Result Summary
         [Display(Name = "Investment Risk Summary")]
-        public InvestmentRiskType InvestmentRisk { get; set; }
+        public InvestmentRiskType? InvestmentRisk { get; set; }
 
         
     }

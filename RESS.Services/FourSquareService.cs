@@ -21,14 +21,14 @@ namespace RESS.Services
                 new FourSquareAnalysis()
                 {
                     FourSquareDateRan = DateTime.UtcNow,
-                    PropertyId = model.Properties.PropertyId,  //
-                    PropAddress = model.Properties.Address,  //
+                    PropertyId = model.PropertyId,  //
+                    PropAddress = model.PropAddress,  //
                     FourSquareAnalysisId = model.FourSquareAnalysisId,
 
-                    RentalIncome = model.Properties.MarketRentValue, //
+                    RentalIncome = model.RentalIncome, //
                     MonthlyLaundryIncome = model.MonthlyLaundryIncome,
                     MonthlyMiscIncome = model.MonthlyMiscIncome,
-                    TotalMonthlyIncome = model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome,
+                    TotalMonthlyIncome = model.RentalIncome + model.MonthlyLaundryIncome + model.MonthlyMiscIncome,
 
                     MonthlyMortgageExpense = model.MonthlyMortgageExpense,
                     MonthlyRentalInsuranceExpense = model.MonthlyRentalInsuranceExpense,
@@ -41,14 +41,14 @@ namespace RESS.Services
                     MonthlyManagementExpense = model.MonthlyManagementExpense,
                     TotalMonthlyPropertyExpenses = model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense,
 
-                    TotalMonthlyCashFlow = (model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense),
+                    TotalMonthlyCashFlow = (model.RentalIncome + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense),
                     EstDownPayment = model.EstDownPayment,
                     EstClosingCost = model.EstClosingCost,
                     EstRehabBudget = model.EstRehabBudget,
                     EstTotalInvestment = model.EstDownPayment + model.EstClosingCost + model.EstRehabBudget,
-                    EstAnnaulCashFlow = ((model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense)) * 12,
+                    EstAnnaulCashFlow = ((model.RentalIncome + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense)) * 12,
                     
-                    TotalCtcRoi = (float)((((model.Properties.MarketRentValue + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense)) * 12) / (model.EstDownPayment + model.EstClosingCost + model.EstRehabBudget)),
+                    TotalCtcRoi = (float)((((model.RentalIncome + model.MonthlyLaundryIncome + model.MonthlyMiscIncome) - (model.MonthlyMortgageExpense + model.MonthlyRentalInsuranceExpense + model.MonthlyTaxExpense + model.MonthlyUtilityExpense + model.MonthlyHoaExpense + model.MonthlyPropertyServiceExpense + model.MonthlyRepairExpense + model.MonthlyVacancyExpense + model.MonthlyManagementExpense)) * 12) / (model.EstDownPayment + model.EstClosingCost + model.EstRehabBudget)),
                     
 
                 };

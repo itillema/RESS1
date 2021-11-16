@@ -27,10 +27,10 @@ namespace RESS.Data
 
         public string PropAddress { get; set; }
 
-       [ForeignKey(nameof(Properties))]
+        //[ForeignKey(nameof(Properties))]
         public int PropertyId { get; set; }
        
-        public virtual Property Properties { get; set; }
+        
 
         
         // Monthly Income
@@ -64,7 +64,10 @@ namespace RESS.Data
         public float TotalCtcRoi { get; set; }
 
         // Analytic Result Summary
-        public InvestmentRiskType InvestmentRisk { get; set; }
+        public InvestmentRiskType? InvestmentRisk { get; set; }
+
+        [Required]
+        public virtual Property Properties { get; set; }
 
     }
 }

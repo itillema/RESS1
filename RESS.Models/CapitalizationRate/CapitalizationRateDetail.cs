@@ -16,6 +16,7 @@ namespace RESS.Models.CapitalizationRate
         public int CapitalizationRateAnalysisId { get; set; }
         [Display(Name = "Ran on")]
         public DateTime CapRateRunDate { get; set; }
+        [Display(Name = "Property Address")]
         public string PropAddress { get; set; }
 
         
