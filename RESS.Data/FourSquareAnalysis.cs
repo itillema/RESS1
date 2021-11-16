@@ -63,8 +63,8 @@ namespace RESS.Data
         public decimal EstAnnaulCashFlow { get; set; }
         public float TotalCtcRoi { get; set; }
 
-        // Analytic Result Summary
-        public InvestmentRiskType? InvestmentRisk { get; set; }
+        //// Analytic Result Summary
+        //public InvestmentRiskType? InvestmentRisk { get; set; }
 
         [Required]
         public virtual Property Properties { get; set; }

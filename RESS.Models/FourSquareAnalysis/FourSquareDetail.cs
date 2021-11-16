@@ -76,9 +76,9 @@ namespace RESS.Models.FourSquareAnalysis
         [Display(Name = "Total Cash-to-Cash ROI")]
         public float TotalCtcRoi { get; set; }
 
-        // Analytic Result Summary
-        [Display(Name = "Investment Risk Summary")]
-        public InvestmentRiskType? InvestmentRisk { get; set; }
+        //// Analytic Result Summary
+        //[Display(Name = "Investment Risk Summary")]
+        //public InvestmentRiskType? InvestmentRisk { get; set; }
 
         
     }
