@@ -131,7 +131,7 @@ namespace RESS.Services
                         EstAnnaulCashFlow = entity.EstAnnaulCashFlow,
 
                         TotalCtcRoi = entity.TotalCtcRoi,
-                        InvestmentRisk = entity.InvestmentRisk
+                        
                     };
 
             }

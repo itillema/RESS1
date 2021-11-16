@@ -1,0 +1,18 @@
+namespace RESS.Data.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class FinalMigration100 : DbMigration
+    {
+        public override void Up()
+        {
+            DropColumn("dbo.FourSquareAnalysis", "InvestmentRisk");
+        }
+        
+        public override void Down()
+        {
+            AddColumn("dbo.FourSquareAnalysis", "InvestmentRisk", c => c.Int());
+        }
+    }
+}

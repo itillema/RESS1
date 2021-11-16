@@ -66,8 +66,7 @@ namespace RESS.Data
         //// Analytic Result Summary
         //public InvestmentRiskType? InvestmentRisk { get; set; }
 
-        [Required]
-        public virtual Property Properties { get; set; }
+        
 
 
 
