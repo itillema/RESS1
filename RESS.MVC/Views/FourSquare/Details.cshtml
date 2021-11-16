@@ -10,7 +10,7 @@
         <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-right: 5px; margin-bottom:5px; padding-bottom:12px;" align="center">
             <div class="col-lg-">
 
-                <h3 class="headingstyle1">Report for @Html.DisplayNameFor(model => model.PropAddress)</h3>
+                <h3 class="headingstyle1">Report for @Html.DisplayFor(model => model.PropAddress)</h3>
                 <dl class="dl-horizontal">
                     <dt>
                         @Html.DisplayNameFor(model => model.FourSquareAnalysisId)
@@ -89,7 +89,7 @@
             </div>
         </div>
 
-        <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-left:0px; margin-right:0px; margin-bottom: 5px; " align="center">
+        <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-left:0px; margin-right:0px; margin-bottom: 5px; padding-bottom: -2px" align="center">
             <div class="col-lg-">
                 <h3 class="headingstyle1">Monthly Expenses</h3>
                 <dl class="dl-horizontal">
@@ -173,6 +173,8 @@
                         @Html.DisplayFor(model => model.TotalMonthlyPropertyExpenses)
                     </dd>
                 </dl>
+                <br />
+                <br />
                 <br />
                 <br />
             </div>

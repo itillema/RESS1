@@ -6,188 +6,215 @@
 
 <h2 class="smalltitle">Report: Net Operating Income Analysis</h2>
 <div class="jumbotron">
-    <div>
-       
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.NetOperatingIncomeId)
-            </dt>
+    <div class="container">
+        <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-right: 5px; margin-bottom:5px; padding-bottom:12px;" align="center">
+            <div class="col-lg-">
 
-            <dd>
-                @Html.DisplayFor(model => model.NetOperatingIncomeId)
-            </dd>
+                <h3 class="headingstyle1">Report for @Html.DisplayFor(model => model.PropAddress)</h3>
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.NetOperatingIncomeId)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.NOIRundate)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.NetOperatingIncomeId)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.NOIRundate)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.NOIRundate)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.PropertyId)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.NOIRundate)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.PropertyId)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PropertyId)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.PropAddress)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.PropertyId)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.PropAddress)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PropAddress)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.RentalIncome)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.PropAddress)
+                    </dd>
+                </dl>
 
-            <dd>
-                @Html.DisplayFor(model => model.RentalIncome)
-            </dd>
+                <h3 class="headingstyle1">Monthly Revenue</h3>
+                <dl>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyLaundryIncome)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.RentalIncome)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyLaundryIncome)
-            </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.RentalIncome)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyMiscIncome)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyLaundryIncome)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyMiscIncome)
-            </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.MonthlyLaundryIncome)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.TotalMonthlyIncome)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyMiscIncome)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.TotalMonthlyIncome)
-            </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.MonthlyMiscIncome)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyMortgageExpense)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.TotalMonthlyIncome)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyMortgageExpense)
-            </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.TotalMonthlyIncome)
+                    </dd>
+                </dl>
+            </div>
+        </div>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyRentalInsuranceExpense)
-            </dt>
+        <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-left:0px; margin-right:0px; margin-bottom: 5px; padding-bottom: -2px" align="center">
+            <div class="col-lg-">
+                <h3 class="headingstyle1">Monthly Expenses</h3>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyRentalInsuranceExpense)
-            </dd>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyMortgageExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyUtilityExpense)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MonthlyMortgageExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyUtilityExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyRentalInsuranceExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyHoaExpense)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MonthlyRentalInsuranceExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyHoaExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyUtilityExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyPropertyServiceExpense)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MonthlyUtilityExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyPropertyServiceExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyHoaExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyVacancyExpense)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MonthlyHoaExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyVacancyExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyPropertyServiceExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyRepairExpense)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MonthlyPropertyServiceExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyRepairExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyVacancyExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MonthlyManagementExpense)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MonthlyVacancyExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MonthlyManagementExpense)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyRepairExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.TotalMonthlyPropertyExpenses)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MonthlyRepairExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.TotalMonthlyPropertyExpenses)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MonthlyManagementExpense)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.AnnualNetOperatingIncome)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.MonthlyManagementExpense)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.AnnualNetOperatingIncome)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.TotalMonthlyPropertyExpenses)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.AnnualRentIncreasePercent)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.TotalMonthlyPropertyExpenses)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.AnnualRentIncreasePercent)
-            </dd>
+                </dl>
+            </div>
+        </div>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.FiveYearNoi)
-            </dt>
+        <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-left:-15px; margin-right:0px; margin-bottom: 5px; " align="center">
+            <div class="col-lg-">
+                <h3 class="headingstyle1">NOI</h3>
 
-            <dd>
-                @Html.DisplayFor(model => model.FiveYearNoi)
-            </dd>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.AnnualNetOperatingIncome)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.FifteenYearNoi)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.AnnualNetOperatingIncome)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.FifteenYearNoi)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.AnnualRentIncreasePercent)
+                    </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.ThirtyYearNoi)
-            </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.AnnualRentIncreasePercent)
+                    </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.ThirtyYearNoi)
-            </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FiveYearNoi)
+                    </dt>
 
-        </dl>
+                    <dd>
+                        @Html.DisplayFor(model => model.FiveYearNoi)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FifteenYearNoi)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.FifteenYearNoi)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ThirtyYearNoi)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ThirtyYearNoi)
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+
+            <p>
+                @Html.ActionLink("View all NOI Reports", "Index")
+            </p>
     </div>
-    <p>
-        @Html.ActionLink("View all NOI Reports", "Index")
-    </p>
 </div>
