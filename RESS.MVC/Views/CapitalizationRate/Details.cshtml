@@ -10,7 +10,7 @@
         <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-right: 5px; margin-bottom:5px; padding-bottom:12px;" align="center">
             <div class="col-lg-">
 
-                <h3 class="headingstyle1">Report for @Html.DisplayFor(model => model.PropAddress)</h3>
+                <h3 class="headingstyle1">Report for Property @Html.DisplayFor(model => model.PropertyId)</h3>
 
                 <dl class="dl-horizontal">
                     <dt>
@@ -56,7 +56,7 @@
                         @Html.DisplayFor(model => model.RentalIncome)
                     </dd>
 
-                    
+
 
                     <dt>
                         @Html.DisplayNameFor(model => model.PropPurchasePrice)
@@ -66,7 +66,7 @@
                         @Html.DisplayFor(model => model.PropPurchasePrice)
                     </dd>
 
-                    
+
 
                     <dt>
                         @Html.DisplayNameFor(model => model.MonthlyLaundryIncome)
@@ -232,15 +232,33 @@
                         @Html.DisplayFor(model => model.EstThirtyYearCapitalizationRate)
                     </dd>
 
-                    
+
 
                 </dl>
 
             </div>
-        </div>
-            <p>
 
-                @Html.ActionLink("View all Cap Rate Reports", "Index")
-            </p>
+
+
+        </div>
+
+        <div class="row col-lg-6" style="background-color: lightgray; border-radius: 6px; margin-left: 5px; margin-right:0px; margin-bottom: 5px; padding-bottom: 15px;" align="center">
+            <div class="col-lg-">
+                <h3 class="headingstyle1">Qualifying Cap Rate</h3>
+                <p class="bodytext">
+                    Beyond a simple math formula, a cap rate is best understood as a measure of risk. So in theory, a higher cap rate means an investment is more risky. A lower cap rate means an investment is less risky.
+                </p>
+
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            
+        </div>
+        <p>
+
+            @Html.ActionLink("View all Cap Rate Reports", "Index")
+        </p>
     </div>
 </div>

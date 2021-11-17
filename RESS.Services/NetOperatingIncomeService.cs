@@ -28,7 +28,7 @@ namespace RESS.Services
                     NOIRundate = DateTime.UtcNow,
 
                     PropertyId = model.PropertyId,
-                    PropAddress = model.PropAddress,
+                    
 
                     RentalIncome = model.RentalIncome,
                     MonthlyLaundryIncome = model.MonthlyLaundryIncome,
@@ -78,7 +78,7 @@ namespace RESS.Services
                                     NOIRundate = e.NOIRundate,
                                     PropertyId = e.PropertyId,
 
-                                    PropAddress = e.PropAddress,
+                                    
 
 
 
@@ -102,7 +102,7 @@ namespace RESS.Services
                         NOIRundate = entity.NOIRundate,
                         PropertyId = entity.PropertyId,
 
-                        PropAddress = entity.PropAddress,
+                        
 
                         RentalIncome = entity.RentalIncome,
 
