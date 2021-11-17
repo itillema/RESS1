@@ -7,13 +7,13 @@ namespace RESS.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class FinalFinalFinal2 : IMigrationMetadata
+    public sealed partial class initCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FinalFinalFinal2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202111170020120_FinalFinalFinal2"; }
+            get { return "202111170201204_initCreate"; }
         }
         
         string IMigrationMetadata.Source

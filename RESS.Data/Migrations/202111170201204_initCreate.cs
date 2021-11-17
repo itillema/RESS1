@@ -3,7 +3,7 @@ namespace RESS.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class FinalFinalFinal2 : DbMigration
+    public partial class initCreate : DbMigration
     {
         public override void Up()
         {
