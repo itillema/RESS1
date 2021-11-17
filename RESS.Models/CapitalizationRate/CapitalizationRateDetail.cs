@@ -16,8 +16,7 @@ namespace RESS.Models.CapitalizationRate
         public int CapitalizationRateAnalysisId { get; set; }
         [Display(Name = "Ran on")]
         public DateTime CapRateRunDate { get; set; }
-        [Display(Name = "Property Address")]
-        public string PropAddress { get; set; }
+        
 
         
         [Display(Name = "Property ID")]
@@ -67,9 +66,9 @@ namespace RESS.Models.CapitalizationRate
         public decimal AnnualNetOperatingIncome { get; set; }
         [Display(Name = "Annual Rent Increase")]
         public float AnnualRentIncreasePercent { get; set; }
-        public decimal PropMarketValue { get; set; }
+        [Display(Name = "Property Purchase Price")]
         public decimal PropPurchasePrice { get; set; }
-        public TimeSpan PropOwnedDuration { get; set; }
+       
 
         // CapRate
         [Display(Name = "Current Capitalization Rate")]
@@ -80,7 +79,6 @@ namespace RESS.Models.CapitalizationRate
         public float EstFifteenYearCapitalizationRate { get; set; }
         [Display(Name = "Projected 30 Year Capitalization Rate")]
         public float EstThirtyYearCapitalizationRate { get; set; }
-        [Display(Name = "Ownered Duration Capitalization Rate")]
-        public float OwnedDurationCapitalizationRate { get; set; }
+        
     }
 }

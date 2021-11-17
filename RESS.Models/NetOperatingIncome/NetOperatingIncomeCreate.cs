@@ -14,9 +14,6 @@ namespace RESS.Models.NetOperatingIncome
         [Display(Name = "Ran on")]
         public DateTime NOIRundate { get; set; }
 
-        [Display(Name = "Property Address")]
-        public string PropAddress { get; set; }
-
 
        
         [Display(Name = "Property ID")]

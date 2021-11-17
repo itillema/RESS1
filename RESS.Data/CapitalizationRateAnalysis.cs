@@ -14,7 +14,7 @@ namespace RESS.Data
         [Key]
         public int CapitalizationRateAnalysisId { get; set; }
         public DateTime CapRateRunDate { get; set; }
-        public string PropAddress { get; set; }
+        
 
         //[ForeignKey(nameof(Properties))]
         public int PropertyId { get; set; }
@@ -48,21 +48,18 @@ namespace RESS.Data
         // NOI
         public decimal AnnualNetOperatingIncome { get; set; }
         public float AnnualRentIncreasePercent { get; set; }
-        public decimal PropMarketValue { get; set; }
+        
         public decimal PropPurchasePrice { get; set; }
-        public TimeSpan PropOwnedDuration { get; set; }
+        
 
         // CapRate
         public float CurrentCapitalizationRate { get; set; }
         public float EstFiveYearCapitalizationRate { get; set; }
         public float EstFifteenYearCapitalizationRate { get; set; }
         public float EstThirtyYearCapitalizationRate { get; set; }
-        public float OwnedDurationCapitalizationRate { get; set; }
+       
 
-        [Required]
-        public virtual Property Properties { get; set; }
-        [Required]
-        public virtual Owner Owners { get; set; }
+        
 
     }
 }

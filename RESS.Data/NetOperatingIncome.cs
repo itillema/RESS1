@@ -15,7 +15,7 @@ namespace RESS.Data
         public int NetOperatingIncomeId { get; set; }
         public DateTime NOIRundate { get; set; }
 
-        public string PropAddress { get; set; }
+        //public string PropAddress { get; set; }
 
         //[ForeignKey(nameof(Properties))]
         public int PropertyId { get; set; }
@@ -49,8 +49,8 @@ namespace RESS.Data
         public decimal FifteenYearNoi { get; set; }
         public decimal ThirtyYearNoi { get; set; }
 
-        [Required]
-        public virtual Property Properties { get; set; }
+        //[Required]
+        //public virtual Property Properties { get; set; }
 
     }
 }

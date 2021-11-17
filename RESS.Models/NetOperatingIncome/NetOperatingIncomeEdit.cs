@@ -17,7 +17,7 @@ namespace RESS.Models.NetOperatingIncome
        
         [Display(Name = "Property ID")]
         public int PropertyId { get; set; }
-        public virtual Property Property { get; set; }
+        
 
         // Monthly Income
         [Display(Name = "Estimated Monthly Laundry Income")]

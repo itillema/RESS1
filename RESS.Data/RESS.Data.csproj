@@ -110,9 +110,9 @@
     <Compile Include="CapitalizationRateAnalysis.cs" />
     <Compile Include="FourSquareAnalysis.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202111162300032_FinalMigration100.cs" />
-    <Compile Include="Migrations\202111162300032_FinalMigration100.Designer.cs">
-      <DependentUpon>202111162300032_FinalMigration100.cs</DependentUpon>
+    <Compile Include="Migrations\202111162324283_FinalFInalFinal.cs" />
+    <Compile Include="Migrations\202111162324283_FinalFInalFinal.Designer.cs">
+      <DependentUpon>202111162324283_FinalFInalFinal.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NetOperatingIncome.cs" />
@@ -154,8 +154,8 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202111162300032_FinalMigration100.resx">
-      <DependentUpon>202111162300032_FinalMigration100.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202111162324283_FinalFInalFinal.resx">
+      <DependentUpon>202111162324283_FinalFInalFinal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
